@@ -12,6 +12,10 @@ The primary purpose of `shouldComponentUpdate` is to optimize performance by pre
 - `nextState`: The next state that the component will have.
 - `nextContext`: The next context that the component will receive, if using context API.
 
+## Return Value
+
+- It's return `true` by default (`true`=re-render , `false`=Do note re-render)
+
 ### Syntax
 
 ```jsx
