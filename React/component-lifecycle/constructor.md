@@ -8,7 +8,7 @@ In React class components, the constructor method is a special method that gets 
 
 3. **parameters** :
 
-   - `props`:The component’s initial props.
+   - `props`: The component’s initial props.
 
 ### Syntax
 

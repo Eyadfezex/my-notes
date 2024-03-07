@@ -6,6 +6,11 @@ In React, `getSnapshotBeforeUpdate` is a lifecycle method available in class com
 
 The primary purpose of `getSnapshotBeforeUpdate` is to capture information from the DOM (such as scroll position or the dimensions of an element) before it's potentially changed due to an update. This allows the component to preserve this information and restore it after the update is complete.
 
+## Parameters
+
+- `prevProps`: The previous props before the update.
+- `prevState`: The previous state before the update.
+
 ### Syntax
 
 ```jsx

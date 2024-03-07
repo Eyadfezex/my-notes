@@ -6,6 +6,10 @@ In React, the `forceUpdate` method is a built-in method available in class compo
 
 The primary purpose of `forceUpdate` is to manually trigger a re-render of a component when needed. This can be useful in situations where the component's render method relies on data outside of its props or state, such as when using third-party libraries or integrating with external APIs.
 
+## Parameters
+
+- `callback`: An optional callback function to be executed after the component has been re-rendered.
+
 ### Syntax
 
 ```jsx

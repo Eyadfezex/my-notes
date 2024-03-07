@@ -14,6 +14,11 @@ The primary purpose of `UNSAFE_componentWillReceiveProps` was to perform actions
 - It could lead to confusion and unexpected behavior, especially when relying on both props and state in the same component lifecycle method.
 - Its naming was misleading and could cause confusion for developers.
 
+## Parameters
+
+- `nextProps`: The next props that the component will receive.
+- `nextContext`: The next context that the component will receive, if using context API.
+
 ### Recommendation
 
 Instead of using `UNSAFE_componentWillReceiveProps`, it's recommended to use safer alternatives:

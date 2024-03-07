@@ -6,6 +6,10 @@ In React, `static getDerivedStateFromError` is a static lifecycle method availab
 
 The primary purpose of `static getDerivedStateFromError` is to provide a mechanism for class components to handle errors that occur within their descendant components during the rendering process. It allows the component to update its state in response to the error, potentially displaying an error message or fallback UI.
 
+## Parameters
+
+- `error`: The error that was thrown.
+
 ### Syntax
 
 ```jsx

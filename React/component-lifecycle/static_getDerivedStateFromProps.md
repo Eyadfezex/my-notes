@@ -6,6 +6,11 @@ In React, `static getDerivedStateFromProps` is a static lifecycle method availab
 
 The primary purpose of `static getDerivedStateFromProps` is to provide a mechanism for class components to update their internal state based on changes in props before rendering. It allows the component to synchronize its state with the incoming props.
 
+## Parameters
+
+- `props`: The next props that the component will receive.
+- `state`: The current state of the component.
+
 ### Syntax
 
 ```jsx
