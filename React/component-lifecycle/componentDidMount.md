@@ -13,13 +13,38 @@ The primary purpose of `componentDidMount` is to perform actions that need to ta
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  state = {
+    data: null,
+  };
+
   componentDidMount() {
-    // Perform initialization tasks, data fetching, etc.
+    // Fetch data from an API after the component is mounted
+    fetch("https://api.example.com/data")
+      .then((response) => response.json())
+      .then((data) => {
+        // Update the component's state with the fetched data
+        this.setState({ data });
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }
 
   render() {
-    // Render JSX
+    return (
+      <div>
+        {this.state.data ? (
+          <div>Data: {this.state.data}</div>
+        ) : (
+          <div>Loading...</div>
+        )}
+      </div>
+    );
   }
 }
+
+export default MyComponent;
 ```

@@ -14,24 +14,29 @@ The primary purpose of `componentDidCatch` is error handling and error boundary 
 ### Syntax
 
 ```jsx
-class ErrorBoundary extends React.Component {
-  state = { hasError: false };
+import React, { Component } from "react";
 
-  componentDidCatch(error, errorInfo) {
-    // Update state to display fallback UI
+class ErrorBoundary extends Component {
+  state = {
+    hasError: false,
+  };
+
+  componentDidCatch(error, info) {
+    // Update state to indicate that an error has occurred
     this.setState({ hasError: true });
-    // Log error details
-    console.error("Error caught by ErrorBoundary:", error, errorInfo);
+    // Log the error to an error reporting service
+    console.error("Error caught by ErrorBoundary:", error, info);
   }
 
   render() {
     if (this.state.hasError) {
-      // Fallback UI
-      return <h1>Something went wrong.</h1>;
+      // Display a fallback UI when an error occurs
+      return <div>Something went wrong. Please try again later.</div>;
     }
-
-    // Render children normally
+    // Render the children normally if no error has occurred
     return this.props.children;
   }
 }
+
+export default ErrorBoundary;
 ```

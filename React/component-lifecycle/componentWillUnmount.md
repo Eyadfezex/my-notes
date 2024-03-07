@@ -9,13 +9,31 @@ The primary purpose of `componentWillUnmount` is to perform cleanup actions that
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.timerId = null;
+  }
+
+  componentDidMount() {
+    // Start a timer when the component mounts
+    this.timerId = setInterval(() => {
+      console.log("Timer tick");
+    }, 1000);
+  }
+
   componentWillUnmount() {
-    // Perform cleanup tasks, unsubscribe, remove event listeners, etc.
+    // Clean up the timer when the component is unmounted
+    clearInterval(this.timerId);
+    console.log("Component is unmounted, timer is cleared");
   }
 
   render() {
-    // Render JSX
+    return <div>My Component</div>;
   }
 }
+
+export default MyComponent;
 ```

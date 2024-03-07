@@ -30,13 +30,28 @@ Instead of using `UNSAFE_componentWillUpdate`, it's recommended to use safer alt
 ### Example (Deprecated)
 
 ```jsx
-class DeprecatedComponent extends React.Component {
-  UNSAFE_componentWillUpdate(nextProps, nextState) {
-    // Perform preparation tasks before re-rendering
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    // Check if props or state have changed before re-rendering
+    if (
+      this.props.someProp !== prevProps.someProp ||
+      this.state.someState !== prevState.someState
+    ) {
+      // Perform actions based on the updated props or state
+      console.log(
+        "Component is about to re-render:",
+        this.props.someProp,
+        this.state.someState
+      );
+    }
   }
 
   render() {
-    // Render JSX
+    return <div>My Component</div>;
   }
 }
+
+export default MyComponent;
 ```

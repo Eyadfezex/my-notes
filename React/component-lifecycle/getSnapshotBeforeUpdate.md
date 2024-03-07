@@ -14,18 +14,35 @@ The primary purpose of `getSnapshotBeforeUpdate` is to capture information from 
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef(); // Create a ref to a DOM element
+  }
+
   getSnapshotBeforeUpdate(prevProps, prevState) {
-    // Capture information from the DOM
-    // Return a snapshot value or null
+    // Check if the text content of the DOM element has changed
+    if (prevProps.text !== this.props.text) {
+      // Return the scroll position of the DOM element
+      return this.myRef.current.scrollHeight;
+    }
+    return null; // Return null if no snapshot is needed
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    // Access the snapshot value returned by getSnapshotBeforeUpdate
+    // If there was a snapshot returned from getSnapshotBeforeUpdate(), adjust it after the update
+    if (snapshot !== null) {
+      // Scroll the DOM element to the previous scroll position
+      this.myRef.current.scrollTop = snapshot;
+    }
   }
 
   render() {
-    // Render JSX
+    return <div ref={this.myRef}>{this.props.text}</div>;
   }
 }
+
+export default MyComponent;
 ```

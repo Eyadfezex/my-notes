@@ -9,14 +9,16 @@ The primary purpose of `static propTypes` is to define the expected types for pr
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
-  static propTypes = {
-    propName: PropTypes.type,
-    // Additional propTypes
-  };
+import React from "react";
+import PropTypes from "prop-types"; // Import PropTypes from the prop-types package
 
-  render() {
-    // Render JSX using props
-  }
+function MyComponent(props) {
+  return <div>{props.name}</div>;
 }
+
+MyComponent.propTypes = {
+  name: PropTypes.string.isRequired, // Specifies that the 'name' prop should be a string and is required
+};
+
+export default MyComponent;
 ```

@@ -29,13 +29,21 @@ Instead of using `UNSAFE_componentWillReceiveProps`, it's recommended to use saf
 ### Example (Deprecated)
 
 ```jsx
-class DeprecatedComponent extends React.Component {
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    // Perform actions based on changes in props
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  componentDidUpdate(prevProps) {
+    // Check if props have changed
+    if (this.props.someProp !== prevProps.someProp) {
+      // Perform actions based on the new props
+      console.log("Props have changed:", this.props.someProp);
+    }
   }
 
   render() {
-    // Render JSX
+    return <div>My Component</div>;
   }
 }
+
+export default MyComponent;
 ```

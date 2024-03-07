@@ -25,13 +25,22 @@ Instead of using `UNSAFE_componentWillMount`, it's recommended to use safer alte
 ### Example (Deprecated)
 
 ```jsx
-class DeprecatedComponent extends React.Component {
-  UNSAFE_componentWillMount() {
-    // Perform initialization tasks before mounting
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    // Perform any setup here
+  }
+
+  componentDidMount() {
+    // Perform any setup that requires the component to be mounted here
   }
 
   render() {
-    // Render JSX
+    return <div>My Component</div>;
   }
 }
+
+export default MyComponent;
 ```

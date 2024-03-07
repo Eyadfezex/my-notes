@@ -13,13 +13,23 @@ The primary purpose of `forceUpdate` is to manually trigger a re-render of a com
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
-  forceUpdate() {
-    // Force re-render of the component
-  }
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  handleClick = () => {
+    // Perform some action that requires a re-render
+    this.forceUpdate();
+  };
 
   render() {
-    // Render JSX
+    return (
+      <div>
+        <h1>Component State: {Math.random()}</h1>
+        <button onClick={this.handleClick}>Force Update</button>
+      </div>
+    );
   }
 }
+
+export default MyComponent;
 ```

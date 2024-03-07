@@ -15,23 +15,36 @@ In React class components, the constructor method is a special method that gets 
 The syntax for defining a constructor method in a React component is as follows:
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
   constructor(props) {
     super(props);
     // Initialize state
     this.state = {
       count: 0,
     };
+
     // Bind event handlers
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
-    // Event handler logic
+    // Update state
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
   }
 
   render() {
-    // Render JSX
+    return (
+      <div>
+        <h1>Count: {this.state.count}</h1>
+        <button onClick={this.handleClick}>Increment</button>
+      </div>
+    );
   }
 }
+
+export default MyComponent;
 ```

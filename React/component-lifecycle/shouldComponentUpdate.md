@@ -19,14 +19,21 @@ The primary purpose of `shouldComponentUpdate` is to optimize performance by pre
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
   shouldComponentUpdate(nextProps, nextState) {
-    // Return true if the component should re-render
-    // Return false if the component should not re-render
+    // Example: Only re-render if the value prop has changed
+    if (this.props.value !== nextProps.value) {
+      return true; // Re-render
+    }
+    return false; // Do not re-render
   }
 
   render() {
-    // Render JSX
+    return <div>{this.props.value}</div>;
   }
 }
+
+export default MyComponent;
 ```

@@ -19,13 +19,21 @@ The primary purpose of `componentDidUpdate` is to perform actions that need to t
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
   componentDidUpdate(prevProps, prevState) {
-    // Perform side effects, update DOM, etc.
+    // Check if the prop 'data' has changed
+    if (prevProps.data !== this.props.data) {
+      // Perform some action based on the updated data
+      console.log("Data has changed:", this.props.data);
+    }
   }
 
   render() {
-    // Render JSX
+    return <div>{this.props.data}</div>;
   }
 }
+
+export default MyComponent;
 ```
