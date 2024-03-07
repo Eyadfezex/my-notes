@@ -9,12 +9,39 @@ The primary purpose of `static contextType` is to simplify the consumption of co
 ### Syntax
 
 ```jsx
-class MyClassComponent extends React.Component {
+import React from "react";
+
+// Create a context
+const MyContext = React.createContext("default");
+
+// Create a component that provides the context
+class MyProvider extends React.Component {
+  render() {
+    return (
+      <MyContext.Provider value="Hello from Context">
+        {this.props.children}
+      </MyContext.Provider>
+    );
+  }
+}
+
+// Create a component that consumes the context using static contextType
+class MyConsumer extends React.Component {
   static contextType = MyContext;
 
   render() {
-    const { value } = this.context;
-    // Use context value
+    return <h1>{this.context}</h1>;
   }
 }
+
+// Example usage of the components
+function App() {
+  return (
+    <MyProvider>
+      <MyConsumer />
+    </MyProvider>
+  );
+}
+
+export default App;
 ```

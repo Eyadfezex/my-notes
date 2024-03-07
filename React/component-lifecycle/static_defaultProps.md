@@ -9,14 +9,23 @@ The primary purpose of `static defaultProps` is to provide fallback values for p
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
+import React, { Component } from "react";
+
+class MyComponent extends Component {
   static defaultProps = {
-    propName: defaultValue,
-    // Additional default props
+    name: "Guest",
+    age: 25,
   };
 
   render() {
-    // Render JSX using props
+    return (
+      <div>
+        <p>Name: {this.props.name}</p>
+        <p>Age: {this.props.age}</p>
+      </div>
+    );
   }
 }
+
+export default MyComponent;
 ```

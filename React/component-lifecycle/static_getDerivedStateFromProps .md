@@ -14,17 +14,31 @@ The primary purpose of `static getDerivedStateFromProps` is to provide a way for
 ### Syntax
 
 ```jsx
-class MyComponent extends React.Component {
-  static getDerivedStateFromProps(props, state) {
-    // Return an object to update state based on props
+import React, { Component } from "react";
+
+class MyComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Initialize state based on props
+      value: props.initialValue,
+    };
   }
 
-  state = {
-    // Initialize state
-  };
+  static getDerivedStateFromProps(nextProps, prevState) {
+    // Update state based on changes in props
+    if (nextProps.initialValue !== prevState.value) {
+      return {
+        value: nextProps.initialValue,
+      };
+    }
+    return null; // Return null if no state update is needed
+  }
 
   render() {
-    // Render JSX using state and props
+    return <div>{this.state.value}</div>;
   }
 }
+
+export default MyComponent;
 ```
