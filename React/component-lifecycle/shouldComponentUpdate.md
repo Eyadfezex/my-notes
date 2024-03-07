@@ -4,7 +4,7 @@ In React, `shouldComponentUpdate` is a lifecycle method available in class compo
 
 ### Purpose
 
-> The primary purpose of `shouldComponentUpdate` is to optimize performance by preventing unnecessary re-renders of a component. By implementing this > method, a component can compare incoming props or state with the current props or state and decide whether a re-render is necessary.
+The primary purpose of `shouldComponentUpdate` is to optimize performance by preventing unnecessary re-renders of a component. By implementing this method, a component can compare incoming props or state with the current props or state and decide whether a re-render is necessary.
 
 ## Parameters
 
