@@ -1,6 +1,7 @@
 The web browser works through several key components and steps:
 
 1. **Browser Life Cycle**:
+
    - The browser life cycle runs through 7 base components:
      1. User interface.
      2. Browser engine.
