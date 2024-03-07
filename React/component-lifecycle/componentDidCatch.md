@@ -6,6 +6,11 @@ In React, `componentDidCatch` is a lifecycle method available in class component
 
 The primary purpose of `componentDidCatch` is error handling and error boundary creation. An error boundary is a React component that catches JavaScript errors anywhere in its child component tree, logs those errors, and displays a fallback UI instead of crashing the entire component tree.
 
+## Parameters
+
+- `error`: The error that was thrown.
+- `info`: An object containing information about the error, including its component stack trace.
+
 ### Syntax
 
 ```jsx
