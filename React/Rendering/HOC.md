@@ -1,10 +1,16 @@
 ## HOC
 
-A higher-order component (HOC) is an advanced technique in React for reusing component logic. HOCs are not part of the React API, per se. They are a pattern that emerges from React’s compositional nature.
+A Higher-Order Component is a pattern in React where a function takes a component and returns a new component with added functionality. It's a way of enhancing or modifying existing components in a composable manner.
 
-Concretely, a higher-order component is a function that takes a component and returns a new component.
+## Use Cases :
 
-Whereas a component transforms props into UI, a higher-order component transforms a component into another component.
+- Code Reusability: HOCs promote reusability by encapsulating common functionalities that can be applied to multiple components.
+
+- Cross-cutting Concerns: HOCs are often used for concerns that span multiple components, such as logging, authentication, or route handling.
+
+- Props Injection: HOCs can inject additional props or behavior into components without modifying the components themselves.
+
+- Conditional Rendering: HOCs can conditionally render components based on certain conditions.
 
 ## Syntax
 
