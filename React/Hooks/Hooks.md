@@ -42,7 +42,7 @@ function Form() {
 
 ## Effect Hooks
 
-- Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets written using a different UI library, and other non-React code.
+- Effects in React enable components to interact with external systems, such as network requests, browser DOM manipulation, animations, integration with different UI libraries' widgets, and other non-React code.
 
 - `useEffect` connects a component to an external system.
 
@@ -54,4 +54,18 @@ function ChatRoom({ roomId }) {
     return () => connection.disconnect();
   }, [roomId]);
   // ...
+```
+
+## Performance Hooks
+
+- To optimize re-rendering performance and skip unnecessary work in React, you can utilize hooks such as:
+
+- `useMemo` lets you cache the result of an expensive calculation.
+- `useCallback` lets you cache a function definition before passing it down to an optimized component.
+
+```jsx
+function TodoList({ todos, tab, theme }) {
+  const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
+  // ...
+}
 ```
