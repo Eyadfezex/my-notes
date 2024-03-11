@@ -13,11 +13,11 @@
   - [`useState`](https://react.dev/reference/react/useState) declares a state variable that you can update directly.
   - [`useReducer`](https://react.dev/reference/react/useReducer) declares a state variable with the update logic inside a [reducer function.](https://react.dev/learn/extracting-state-logic-into-a-reducer)
 
-  ## Context Hooks
+## Context Hooks
 
-  - Context lets a component receive information from distant parents without passing it as props. For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
+- Context lets a component receive information from distant parents without passing it as props. For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
 
-    - `useContext` reads and subscribes to a context.
+  - `useContext` reads and subscribes to a context.
 
 ```jsx
 function Button() {
