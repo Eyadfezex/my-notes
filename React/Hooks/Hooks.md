@@ -39,3 +39,9 @@
 
 - `useMemo` lets you cache the result of an expensive calculation.
 - `useCallback` lets you cache a function definition before passing it down to an optimized component.
+
+## Resource Hooks
+
+- Resources can be accessed by a component without having them as part of their state. For example, a component can read a message from a Promise or read styling information from a context.
+
+- `use` lets you read the value of a resource like a Promise or context.
