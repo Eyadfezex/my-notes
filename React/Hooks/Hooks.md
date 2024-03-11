@@ -33,7 +33,7 @@ function Button() {
 
 - `useImperativeHandle` lets you customize the ref exposed by your component. This is rarely used.
 
-## useRef Syntax
+- useRef Syntax
 
 ```jsx
 function Form() {
@@ -42,7 +42,7 @@ function Form() {
 
 ```
 
-## useImperativeHandle Syntax
+- useImperativeHandle Syntax
 
 ```jsx
 import React, { useRef, useImperativeHandle, forwardRef } from "react";
@@ -91,7 +91,7 @@ function ChatRoom({ roomId }) {
 - `useMemo` lets you cache the result of an expensive calculation.
 - `useCallback` lets you cache a function definition before passing it down to an optimized component.
 
-## useMemo Syntax
+- useMemo Syntax
 
 ```jsx
 function TodoList({ todos, tab, theme }) {
@@ -100,7 +100,7 @@ function TodoList({ todos, tab, theme }) {
 }
 ```
 
-## useCallback Syntax
+- useCallback Syntax
 
 ```jsx
 import React, { useState, useCallback } from "react";
