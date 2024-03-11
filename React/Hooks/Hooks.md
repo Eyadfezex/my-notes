@@ -13,6 +13,45 @@
   - [`useState`](https://react.dev/reference/react/useState) declares a state variable that you can update directly.
   - [`useReducer`](https://react.dev/reference/react/useReducer) declares a state variable with the update logic inside a [reducer function.](https://react.dev/learn/extracting-state-logic-into-a-reducer)
 
+- **useState Syntax**
+
+```jsx
+function ImageGallery() {
+  const [index, setIndex] = useState(0);
+  // ...
+```
+
+- **useReducer Syntax**
+
+```jsx
+import React, { useReducer } from "react";
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    default:
+      throw new Error("Unhandled action type");
+  }
+};
+
+const Counter = () => {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    <div>
+      <h1>Count: {state.count}</h1>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
 ## Context Hooks
 
 - Context lets a component receive information from distant parents without passing it as props. For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
