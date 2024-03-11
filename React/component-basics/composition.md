@@ -2,6 +2,8 @@
 
 Composition is a fundamental concept in React that involves combining multiple components together to create more complex UI structures. It enables developers to build reusable and modular components by composing smaller, simpler components together.
 
+![composition](../img/react-components@1.5x.svg)
+
 ### How Composition Works
 
 In React, components can be composed in several ways:
