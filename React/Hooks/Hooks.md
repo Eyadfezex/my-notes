@@ -13,56 +13,11 @@
   - [`useState`](https://react.dev/reference/react/useState) declares a state variable that you can update directly.
   - [`useReducer`](https://react.dev/reference/react/useReducer) declares a state variable with the update logic inside a [reducer function.](https://react.dev/learn/extracting-state-logic-into-a-reducer)
 
-- **useState Syntax**
-
-```jsx
-function ImageGallery() {
-  const [index, setIndex] = useState(0);
-  // ...
-```
-
-- **useReducer Syntax**
-
-```jsx
-import React, { useReducer } from "react";
-
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
-    default:
-      throw new Error("Unhandled action type");
-  }
-};
-
-const Counter = () => {
-  const [state, dispatch] = useReducer(reducer, { count: 0 });
-
-  return (
-    <div>
-      <h1>Count: {state.count}</h1>
-      <button onClick={() => dispatch({ type: "increment" })}>+</button>
-      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-    </div>
-  );
-};
-
-export default Counter;
-```
-
 ## Context Hooks
 
 - Context lets a component receive information from distant parents without passing it as props. For example, your app’s top-level component can pass the current UI theme to all components below, no matter how deep.
 
   - `useContext` reads and subscribes to a context.
-
-```jsx
-function Button() {
-  const theme = useContext(ThemeContext);
-  // ...
-```
 
 ## Ref Hooks
 
@@ -72,56 +27,11 @@ function Button() {
 
 - `useImperativeHandle` lets you customize the ref exposed by your component. This is rarely used.
 
-- **useRef Syntax**
-
-```jsx
-function Form() {
-  const inputRef = useRef(null);
-  // ...
-
-```
-
-- **useImperativeHandle Syntax**
-
-```jsx
-import React, { useRef, useImperativeHandle, forwardRef } from "react";
-
-const ChildComponent = forwardRef((props, ref) => {
-  const inputRef = useRef(null);
-  useImperativeHandle(ref, () => ({
-    focusInput: () => inputRef.current.focus(),
-  }));
-  return <input ref={inputRef} />;
-});
-
-const ParentComponent = () => {
-  const childRef = useRef(null);
-  return (
-    <div>
-      <ChildComponent ref={childRef} />
-      <button onClick={() => childRef.current.focusInput()}>Focus Input</button>
-    </div>
-  );
-};
-
-export default ParentComponent;
-```
-
 ## Effect Hooks
 
 - Effects in React enable components to interact with external systems, such as network requests, browser DOM manipulation, animations, integration with different UI libraries' widgets, and other non-React code.
 
 - `useEffect` connects a component to an external system.
-
-```jsx
-function ChatRoom({ roomId }) {
-  useEffect(() => {
-    const connection = createConnection(roomId);
-    connection.connect();
-    return () => connection.disconnect();
-  }, [roomId]);
-  // ...
-```
 
 ## Performance Hooks
 
@@ -129,36 +39,3 @@ function ChatRoom({ roomId }) {
 
 - `useMemo` lets you cache the result of an expensive calculation.
 - `useCallback` lets you cache a function definition before passing it down to an optimized component.
-
-- **useMemo Syntax**
-
-```jsx
-function TodoList({ todos, tab, theme }) {
-  const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
-  // ...
-}
-```
-
-- **useCallback Syntax**
-
-```jsx
-import React, { useState, useCallback } from "react";
-
-const App = () => {
-  const [count, setCount] = useState(0);
-
-  const increment = useCallback(
-    () => setCount((prevCount) => prevCount + 1),
-    []
-  );
-
-  return (
-    <div>
-      <h1>Count: {count}</h1>
-      <button onClick={increment}>Increment</button>
-    </div>
-  );
-};
-
-export default App;
-```
