@@ -29,9 +29,9 @@ function Button() {
 
 - Refs in React hold non-rendering information like DOM nodes or timeout IDs. They're an "escape hatch" from React's paradigm, useful for non-React systems like browser APIs.
 
--`useRef` declares a ref. You can hold any value in it, but most often it’s used to hold a DOM node.
+- `useRef` declares a ref. You can hold any value in it, but most often it’s used to hold a DOM node.
 
--`useImperativeHandle` lets you customize the ref exposed by your component. This is rarely used.
+- `useImperativeHandle` lets you customize the ref exposed by your component. This is rarely used.
 
 ```jsx
 function Form() {
