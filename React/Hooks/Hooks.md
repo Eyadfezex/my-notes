@@ -33,11 +33,39 @@ function Button() {
 
 - `useImperativeHandle` lets you customize the ref exposed by your component. This is rarely used.
 
+## useRef Syntax
+
 ```jsx
 function Form() {
   const inputRef = useRef(null);
   // ...
 
+```
+
+## useImperativeHandle Syntax
+
+```jsx
+import React, { useRef, useImperativeHandle, forwardRef } from "react";
+
+const ChildComponent = forwardRef((props, ref) => {
+  const inputRef = useRef(null);
+  useImperativeHandle(ref, () => ({
+    focusInput: () => inputRef.current.focus(),
+  }));
+  return <input ref={inputRef} />;
+});
+
+const ParentComponent = () => {
+  const childRef = useRef(null);
+  return (
+    <div>
+      <ChildComponent ref={childRef} />
+      <button onClick={() => childRef.current.focusInput()}>Focus Input</button>
+    </div>
+  );
+};
+
+export default ParentComponent;
 ```
 
 ## Effect Hooks
