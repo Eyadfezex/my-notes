@@ -63,9 +63,35 @@ function ChatRoom({ roomId }) {
 - `useMemo` lets you cache the result of an expensive calculation.
 - `useCallback` lets you cache a function definition before passing it down to an optimized component.
 
+## useMemo Syntax
+
 ```jsx
 function TodoList({ todos, tab, theme }) {
   const visibleTodos = useMemo(() => filterTodos(todos, tab), [todos, tab]);
   // ...
 }
+```
+
+## useCallback Syntax
+
+```jsx
+import React, { useState, useCallback } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = useCallback(
+    () => setCount((prevCount) => prevCount + 1),
+    []
+  );
+
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+};
+
+export default App;
 ```
