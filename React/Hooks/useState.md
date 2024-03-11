@@ -28,3 +28,5 @@ function MyComponent() {
   const [todos, setTodos] = useState(() => createTodos());
   // ...
 ```
+
+[`For more info`](https://react.dev/reference/react/useState)
