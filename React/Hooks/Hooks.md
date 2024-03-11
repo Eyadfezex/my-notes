@@ -4,9 +4,7 @@
 
 ## State hooks:
 
-- A form component might have state to keep track of the current input value as the user types.
-- An image carousel component might use state to determine which image to display next.
-- A shopping cart component could use state to manage the list of items added by the user.
+- State lets a component “remember” information like user input. For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.
 
 - To add state to a component, use one of these Hooks:
 
