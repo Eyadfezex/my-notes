@@ -1,9 +1,11 @@
 ## useCallback Hook
 
 `useCallback` is a React Hook that lets you cache a function definition between re-renders.
+[`For more info`](https://react.dev/reference/react/useCallback#)
 
-- `useCallback(fn, dependencies)`
-  [`For more info`](https://react.dev/reference/react/useCallback#)
+```jsx
+useCallback(fn, dependencies);
+```
 
 ## Parameters
 
