@@ -10,6 +10,8 @@ function MyComponent() {
   // ...
 ```
 
+![Context API](../img/1_5KZjV6GR2ua-vlc1fiMNPw.webp)
+
 ## Parameters
 
 - `SomeContext`: The context that you’ve previously created with `createContext`. The context itself does not hold the information, it only represents the kind of information you can provide or read from components.
