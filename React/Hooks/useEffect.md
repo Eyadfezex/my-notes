@@ -1,6 +1,7 @@
 ## useEffect Hook
 
 - useEffect is a React Hook that lets you [synchronize a component with an external system.](https://react.dev/learn/synchronizing-with-effects)
+  [`For more info`](https://react.dev/reference/react/useEffect)
 
 ```jsx
  useEffect(setup, dependencies?)
@@ -34,5 +35,3 @@ function ChatRoom({ roomId }) {
   // ...
 }
 ```
-
-[`For more info`](https://react.dev/reference/react/useEffect)

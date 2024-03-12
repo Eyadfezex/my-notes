@@ -1,6 +1,7 @@
 ## useState Hook
 
 - `useState` is a React Hook that lets you add a state variable to your component.
+  [`For more info`](https://react.dev/reference/react/useState)
 
 ```jsx
 const [state, setState] = useState(initialState);
@@ -28,5 +29,3 @@ function MyComponent() {
   const [todos, setTodos] = useState(() => createTodos());
   // ...
 ```
-
-[`For more info`](https://react.dev/reference/react/useState)
