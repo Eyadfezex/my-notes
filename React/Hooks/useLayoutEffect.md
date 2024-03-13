@@ -4,7 +4,7 @@
 
 - `useEffect` runs after the browser has painted the screen, making it asynchronous.
 
-- On the other hand, `useLayoutEffect` runs synchronously after all DOM mutations but before the browser has painted the screen.
+- On the other hand, `useLayoutEffect` runs synchronously after all DOM mutations but before the browser has painted the screen.This makes it suitable for tasks that require immediate access to the DOM after an update, such as measuring elements or performing animations based on the current layout.
 
 ```jsx
 useLayoutEffect(setup, dependencies?)
