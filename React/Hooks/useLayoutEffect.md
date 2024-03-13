@@ -2,6 +2,10 @@
 
 `useLayoutEffect` is a version of [`useEffect`](./useEffect.md) that fires before the browser repaints the screen.
 
+- `useEffect` runs after the browser has painted the screen, making it asynchronous.
+
+- On the other hand, `useLayoutEffect` runs synchronously after all DOM mutations but before the browser has painted the screen.On the other hand, useLayoutEffect runs synchronously after all DOM mutations but before the browser has painted the screen.
+
 ```jsx
 useLayoutEffect(setup, dependencies?)
 ```
