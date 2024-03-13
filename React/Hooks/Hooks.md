@@ -5,6 +5,7 @@
 ### Hooks rules
 
 - All Hooks should called at the `top level` off component.
+- Hooks don’t work inside classes.
 
 ## State hooks:
 
