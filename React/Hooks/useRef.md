@@ -14,7 +14,7 @@ const ref = useRef(initialValue);
 
 `useRef` returns an object with a single property:
 
-    - `current`: Initially, it's set to the `initialValue` you have passed. You can later set it to something else using `ref.current = newValue`. If you pass the ref object to React as a ref attribute to a JSX node, React will set its current property.
+- `current`: Initially, it's set to the `initialValue` you have passed. You can later set it to something else using `ref.current = newValue`. If you pass the ref object to React as a ref attribute to a JSX node, React will set its current property.
 
 ## Syntax
 
