@@ -1,6 +1,6 @@
 ## useRef Hook
 
-`useRef` is Hook that lets you reference a value that’s not needed for rendering. [`for more info`](https://react.dev/reference/react/useRef)
+`useRef` is a Hook that lets you reference a value that’s not needed for rendering. [`for more info`](https://react.dev/reference/react/useRef)
 
 ```jsx
 const ref = useRef(initialValue);
