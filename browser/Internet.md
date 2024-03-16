@@ -1,4 +1,4 @@
-Here's a breakdown of the provided notes on how the internet works and how we can search on websites:
+# Internet
 
 **How Does the Internet Work?**
 

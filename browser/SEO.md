@@ -1,8 +1,9 @@
-Here's a breakdown of the provided notes on SEO basics and how Google works:
+# SEO
 
 **SEO Basics:**
 
 - **What is SEO?**
+
   - SEO (Search Engine Optimization) is a set of practices and strategies aimed at improving a website's visibility on search engines like Google, Bing, or Yahoo. The primary goal is to increase organic (non-paid) traffic by optimizing various elements, both on and off the website, to make it more attractive to search engines.
 
 - **Why is SEO Important?**
@@ -13,6 +14,7 @@ Here's a breakdown of the provided notes on SEO basics and how Google works:
 **How Google Works:**
 
 - **Crawling & Indexation:**
+
   - **Crawling:**
     - Definition: Crawling refers to the process by which search engine bots (spiders or crawlers) systematically browse the internet, going from one page to another by following links.
     - Purpose: Crawling aims to discover and gather information from web pages. The crawler analyzes content, follows links to other pages, and repeats the process.

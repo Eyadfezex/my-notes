@@ -1,8 +1,8 @@
-## Conditional Rendering in React
+# Conditional Rendering in React
 
 Conditional rendering in React allows you to display different components or UI elements based on conditions or state values. This flexibility enables you to dynamically control what appears on the screen, depending on user interactions or application logic.
 
-### Methods for Conditional Rendering
+## Methods for Conditional Rendering
 
 1. **JavaScript Conditional Statements**:
 
@@ -19,7 +19,7 @@ Conditional rendering in React allows you to display different components or UI 
 4. **Conditional Rendering Outside JSX**:
    - Conditional rendering can also be performed outside JSX, by conditionally rendering components or elements in JavaScript code before returning JSX in the `render()` method.
 
-### Example
+## Example
 
 ```jsx
 import React, { useState } from "react";

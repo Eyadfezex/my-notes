@@ -1,8 +1,8 @@
-## componentDidUpdate Lifecycle Method in React
+# componentDidUpdate Lifecycle Method in React
 
 In React, `componentDidUpdate` is a lifecycle method available in class components that is invoked immediately after updating occurs. It's called after a component's state or props have been updated, but before the component re-renders.
 
-### Purpose
+## Purpose
 
 The primary purpose of `componentDidUpdate` is to perform actions that need to take place after the component's state or props have been updated and the component has re-rendered. This includes tasks such as:
 
@@ -16,7 +16,7 @@ The primary purpose of `componentDidUpdate` is to perform actions that need to t
 - `prevState`: The previous state before the update.
 - `snapshot`: An optional value returned by the `getSnapshotBeforeUpdate()` method.
 
-### Syntax
+## Syntax
 
 ```jsx
 import React, { Component } from "react";

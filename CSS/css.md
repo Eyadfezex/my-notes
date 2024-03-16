@@ -1,6 +1,6 @@
-Here's a breakdown of the provided notes on Responsive Web Design (RWD):
+# Responsive Web Design (RWD)
 
-**Responsive Web Design (RWD):**
+Here's a breakdown of the provided notes on Responsive Web Design (RWD):
 
 - **The Viewport:**
 

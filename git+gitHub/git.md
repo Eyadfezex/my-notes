@@ -1,6 +1,7 @@
+# Why Use Git
+
 Here's a breakdown of the provided reasons to use Git and the associated commands:
 
-**Why Use Git:**
 1. **Devs Contribute to the Same Project**: Git allows multiple developers to work on the same project simultaneously by providing version control and collaboration features.
 2. **Revert Changes**: Git enables you to revert to previous versions of your code easily, providing a safety net for experimentation.
 3. **Collaborate to Fix Issues**: Developers can collaborate efficiently to identify and fix issues by using Git's branching and merging capabilities.
@@ -9,6 +10,7 @@ Here's a breakdown of the provided reasons to use Git and the associated command
 6. **Organize Features**: Git's branching model allows for the organization and isolation of features, making it easier to manage complex projects.
 
 **Git Commands:**
+
 - `init`: Initializes a new Git repository.
 - `status`: Displays the status of the repository, showing which files have been modified, added, or deleted.
 - `touch`: Creates a new file.

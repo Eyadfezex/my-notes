@@ -1,4 +1,4 @@
-## useState Hook
+# useState Hook
 
 - `useState` is a React Hook that lets you add a state variable to your component.
   [`For more info`](https://react.dev/reference/react/useState)

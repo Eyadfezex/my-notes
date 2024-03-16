@@ -1,13 +1,13 @@
-## Hooks
+# Hooks
 
 - **Hooks** are a new addition in React 16.8. They let you use state and other React features without writing a class.
 
-### Hooks rules
+## Hooks rules
 
 - All Hooks should called at the `top level` off component.
 - Hooks don’t work inside classes.
 
-## State hooks:
+## State hooks
 
 - State lets a component “remember” information like user input. For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index.
 

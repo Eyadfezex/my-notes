@@ -1,4 +1,4 @@
-The web browser works through several key components and steps:
+# Browser
 
 1. **Browser Life Cycle**:
 

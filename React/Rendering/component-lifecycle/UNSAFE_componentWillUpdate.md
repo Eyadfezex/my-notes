@@ -1,12 +1,12 @@
-## UNSAFE_componentWillUpdate Lifecycle Method in React
+# UNSAFE_componentWillUpdate Lifecycle Method in React
 
 In React, `UNSAFE_componentWillUpdate` was a lifecycle method available in class components that was invoked just before a component re-rendered due to changes in props or state. It has been marked as unsafe and deprecated in favor of safer alternatives like `getDerivedStateFromProps` and `componentDidUpdate`.
 
-### Purpose
+## Purpose
 
 The primary purpose of `UNSAFE_componentWillUpdate` was to perform preparation tasks before a component re-rendered due to changes in props or state. This included tasks such as preparing for an upcoming update, updating state based on changes, or interacting with the DOM before the update.
 
-### Deprecated Status
+## Deprecated Status
 
 `UNSAFE_componentWillUpdate` has been marked as unsafe and deprecated due to several issues:
 
@@ -20,14 +20,14 @@ The primary purpose of `UNSAFE_componentWillUpdate` was to perform preparation t
 - `nextState`: The next state that the component will have.
 - `nextContext`: The next context that the component will receive, if using context API.
 
-### Recommendation
+## Recommendation
 
 Instead of using `UNSAFE_componentWillUpdate`, it's recommended to use safer alternatives:
 
 - For updating state based on props before rendering, use `getDerivedStateFromProps`.
 - For performing side effects after props or state have changed, use `componentDidUpdate`.
 
-### Example (Deprecated)
+## Example (Deprecated)
 
 ```jsx
 import React, { Component } from "react";

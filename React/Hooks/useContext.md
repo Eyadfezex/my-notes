@@ -1,4 +1,4 @@
-## useContext Hook
+# useContext Hook
 
 `useContext` is a React Hook that lets you read and subscribe to [`context`](https://react.dev/learn/passing-data-deeply-with-context) from your component. [`For more info`](https://react.dev/reference/react/useContext)
 

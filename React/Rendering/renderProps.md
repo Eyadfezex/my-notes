@@ -1,12 +1,12 @@
-## Render Props
+# Render Props
 
 In React, a common pattern is to use render props. This pattern allows you to pass a component as a prop to another component and have that parent component control the child component
 
-### Purpose
+## Purpose
 
 The purpose of using render props in React is to allow components to share code by passing a function as a prop. This enables greater reusability, customization, and flexibility in rendering logic, promoting cleaner and more modular component design.
 
-### Syntax
+## Syntax
 
 ```jsx
 // ParentComponent.js

@@ -1,4 +1,4 @@
-## useLayoutEffect
+# useLayoutEffect
 
 `useLayoutEffect` is a version of [`useEffect`](./useEffect.md) that fires before the browser repaints the screen. [`for more info`](https://react.dev/reference/react/useLayoutEffect)
 

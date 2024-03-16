@@ -1,10 +1,10 @@
-## Composition in React
+# Composition in React
 
 Composition is a fundamental concept in React that involves combining multiple components together to create more complex UI structures. It enables developers to build reusable and modular components by composing smaller, simpler components together.
 
 ![composition](../img/react-components@1.5x.svg)
 
-### How Composition Works
+## How Composition Works
 
 In React, components can be composed in several ways:
 
@@ -16,14 +16,14 @@ In React, components can be composed in several ways:
 
 4. **Render Props**: Render props is a pattern where a component's render method receives a function as a prop, which it then calls to render its content. This allows for greater flexibility and reusability.
 
-### Benefits of Composition
+## Benefits of Composition
 
 - **Reusability**: Composition encourages building smaller, reusable components that can be combined in different ways to create new functionality.
 - **Modularity**: Components can be broken down into smaller, more manageable pieces, making code easier to understand and maintain.
 - **Flexibility**: Composition allows for greater flexibility in building UIs, as components can be mixed and matched to create complex structures.
 - **Separation of Concerns**: By composing components, concerns such as data fetching, styling, and logic can be separated into distinct components, improving code organization and readability.
 
-### Example
+## Example
 
 ```jsx
 import React from "react";

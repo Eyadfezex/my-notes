@@ -1,4 +1,4 @@
-Here's a breakdown of the provided notes on CORS (Cross-Origin Resource Sharing) and SOP (Same-Origin Policy):
+# Web_security
 
 **CORS (Cross-Origin Resource Sharing):**
 

@@ -1,4 +1,4 @@
-## Constructor Method in React Components
+# Constructor Method in React Components
 
 In React class components, the constructor method is a special method that gets called when a component is initialized or "constructed". It's primarily used for two purposes:
 
@@ -10,7 +10,7 @@ In React class components, the constructor method is a special method that gets 
 
    - `props`: The component’s initial props.
 
-### Syntax
+## Syntax
 
 The syntax for defining a constructor method in a React component is as follows:
 

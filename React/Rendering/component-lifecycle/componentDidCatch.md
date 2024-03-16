@@ -1,8 +1,8 @@
-## componentDidCatch Lifecycle Method in React
+# componentDidCatch Lifecycle Method in React
 
 In React, `componentDidCatch` is a lifecycle method available in class components that is invoked when an error occurs within the component tree of a class component. It provides a way to catch and handle errors that occur during rendering, in lifecycle methods, or in the constructor of any child component.
 
-### Purpose
+## Purpose
 
 The primary purpose of `componentDidCatch` is error handling and error boundary creation. An error boundary is a React component that catches JavaScript errors anywhere in its child component tree, logs those errors, and displays a fallback UI instead of crashing the entire component tree.
 
@@ -11,7 +11,7 @@ The primary purpose of `componentDidCatch` is error handling and error boundary 
 - `error`: The error that was thrown.
 - `info`: An object containing information about the error, including its component stack trace.
 
-### Syntax
+## Syntax
 
 ```jsx
 import React, { Component } from "react";

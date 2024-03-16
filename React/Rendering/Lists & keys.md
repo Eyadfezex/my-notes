@@ -1,4 +1,4 @@
-## Lists & keys
+# Lists & keys
 
 In React, lists are used to render multiple elements dynamically based on an array of data.
 

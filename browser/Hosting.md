@@ -1,3 +1,5 @@
+# Hosting
+
 1. **Web Hosting**:
    Web hosting is a service that provides storage space and access for websites on the internet.
 

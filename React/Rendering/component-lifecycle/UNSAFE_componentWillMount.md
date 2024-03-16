@@ -1,12 +1,12 @@
-## UNSAFE_componentWillMount Lifecycle Method in React
+# UNSAFE_componentWillMount Lifecycle Method in React
 
 In React, `UNSAFE_componentWillMount` was a lifecycle method available in class components that was invoked just before mounting (rendering) occurs. It has been marked as unsafe and deprecated in favor of safer alternatives like `componentDidMount`.
 
-### Purpose
+## Purpose
 
 The primary purpose of `UNSAFE_componentWillMount` was to perform initialization tasks that needed to take place before the component was mounted (rendered) to the DOM. This included tasks such as setting up state or making initial API calls.
 
-### Deprecated Status
+## Deprecated Status
 
 `UNSAFE_componentWillMount` has been marked as unsafe and deprecated due to several issues:
 
@@ -14,7 +14,7 @@ The primary purpose of `UNSAFE_componentWillMount` was to perform initialization
 - It was called synchronously before rendering, which could lead to blocking behavior and performance issues.
 - Its naming was misleading and could cause confusion for developers.
 
-### Recommendation
+## Recommendation
 
 Instead of using `UNSAFE_componentWillMount`, it's recommended to use safer alternatives:
 
@@ -22,7 +22,7 @@ Instead of using `UNSAFE_componentWillMount`, it's recommended to use safer alte
 - For updating state based on props before rendering, use `getDerivedStateFromProps`.
 - For fetching data from APIs or performing side effects after rendering, use `componentDidMount`.
 
-### Example (Deprecated)
+## Example (Deprecated)
 
 ```jsx
 import React, { Component } from "react";

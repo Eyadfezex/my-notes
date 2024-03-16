@@ -1,12 +1,12 @@
-## UNSAFE_componentWillReceiveProps Lifecycle Method in React
+# UNSAFE_componentWillReceiveProps Lifecycle Method in React
 
 In React, `UNSAFE_componentWillReceiveProps` was a lifecycle method available in class components that was invoked just before a component received new props. It has been marked as unsafe and deprecated in favor of safer alternatives like `componentDidUpdate` or `getDerivedStateFromProps`.
 
-### Purpose
+## Purpose
 
 The primary purpose of `UNSAFE_componentWillReceiveProps` was to perform actions based on changes in props before the component re-rendered. This included tasks such as updating state based on new props or performing side effects when props changed.
 
-### Deprecated Status
+## Deprecated Status
 
 `UNSAFE_componentWillReceiveProps` has been marked as unsafe and deprecated due to several issues:
 
@@ -19,14 +19,14 @@ The primary purpose of `UNSAFE_componentWillReceiveProps` was to perform actions
 - `nextProps`: The next props that the component will receive.
 - `nextContext`: The next context that the component will receive, if using context API.
 
-### Recommendation
+## Recommendation
 
 Instead of using `UNSAFE_componentWillReceiveProps`, it's recommended to use safer alternatives:
 
 - For updating state based on props before rendering, use `getDerivedStateFromProps`.
 - For performing side effects or updating state after props have changed, use `componentDidUpdate`.
 
-### Example (Deprecated)
+## Example (Deprecated)
 
 ```jsx
 import React, { Component } from "react";

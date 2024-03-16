@@ -1,4 +1,4 @@
-Here's a breakdown of the provided notes on TypeScript's simple data types:
+# TS(TypeScript)
 
 **TypeScript Overview:**
 
