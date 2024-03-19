@@ -10,3 +10,25 @@ Nested routes in React Router involve organizing routes within other routes, cre
 - Navigation Menu: A navigation menu enables easy movement between app sections.
 
 - Enhanced Code Organization: The code is structured to simplify managing routing complexities.
+
+## Example
+
+```jsx
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/products" component={Products}>
+          <Route path="/products/electronics" component={Electronics} />
+          <Route path="/products/clothing" component={Clothing} />
+        </Route>
+      </Switch>
+    </Router>
+  );
+};
+```
