@@ -1,8 +1,12 @@
 # Nested Routes
 
-- The code illustrates nested routes in a React application with React Router.
-  ![alt text](../../img//nestedRoutes.png)
-- Components for home, about, contact, and products pages are defined.
-- Nested routes are configured for product categories like electronics and clothing.
-- Navigation menu enables easy movement between app sections.
-- Enhanced code organization simplifies management of routing complexities.
+Nested routes in React Router involve organizing routes within other routes, creating a hierarchical structure for rendering components based on URL segments.
+![alt text](../../img//nestedRoutes.png)
+
+- Component Definition: Home, about, contact, and product pages are defined.
+
+- Nested Routes: Routes for product categories like electronics and clothing are configured within the products page.
+
+- Navigation Menu: A navigation menu enables easy movement between app sections.
+
+- Enhanced Code Organization: The code is structured to simplify managing routing complexities.
