@@ -26,11 +26,10 @@ function App() {
       <Route path="/" element={<Dashboard />}>
         <Route path="messages" element={<DashboardMessages />} />
         <Route path="tasks" element={<DashboardTasks />} />
-        <Route>
-      <Route  element={<component />}>
-        <Route path="messages" element={<component_1 />} />
-        <Route path="tasks" element={<component_2 />} />
 
+        <Route element={<component />}>
+          <Route path="messages" element={<component_1 />} />
+          <Route path="tasks" element={<component_2 />} />
         </Route>
       </Route>
     </Routes>
