@@ -2,6 +2,8 @@
 
 `<BrowserRouter>`: provides a convenient and efficient way to implement client-side routing in React applications, allowing for seamless navigation and clean URL management.
 
+you just need to make sure that if you're using React Router on the web, you wrap your app inside of the `BrowserRouter` component.
+
 ## props
 
 - `basename`:
