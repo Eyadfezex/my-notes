@@ -17,11 +17,24 @@ const App = () => {
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
         <Route path="/products" component={Products}>
-          <Route path="/products/electronics" component={Electronics} />
-          <Route path="/products/clothing" component={Clothing} />
+          <Route path="electronics" component={Electronics} />
         </Route>
       </Switch>
     </Router>
   );
 };
+```
+
+```jsx
+import { Outlet } from "react-router-dom";
+
+function Products() {
+  return (
+    <Container>
+      <Items />
+      <Outlet /> //If the app's location matches the nested Route's path, this Outlet
+      component will render the Route's element.
+    </Container>
+  );
+}
 ```
