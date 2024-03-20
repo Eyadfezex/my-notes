@@ -2,6 +2,8 @@
 
 React Router is a JavaScript framework that lets us handle client and server-side routing in React applications.
 
+they give you routing primitives. To align with React, naturally, these "routing primitives" are really just a collection of React components and Hooks.
+
 ## MPA VS SPA
 
 1- MPA
