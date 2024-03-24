@@ -1,4 +1,4 @@
-# useNavigate
+# `useNavigate`
 
 `useNavigate` is a React Router hook enabling **[programmatic](../Topics/Programmatically%20Navigate.md)** navigation between routes in a React application.
 
