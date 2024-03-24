@@ -1,4 +1,4 @@
-# useParams
+# `useParams`
 
 `useParams` in React Router gets dynamic values from the URL, like :id from /users/:id. Child routes inherit these values from their parent routes.
 
