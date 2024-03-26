@@ -2,7 +2,7 @@
 
 Nested routes in React Router involve organizing routes within other routes, creating a hierarchical structure for rendering components based on URL segments.
 
-![alt text](../../img//nestedRoutes.png)
+![alt text](../../../img/nestedRoutes.png)
 
 ## Example
 
