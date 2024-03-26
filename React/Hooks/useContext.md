@@ -10,7 +10,7 @@ function MyComponent() {
   // ...
 ```
 
-![Context API](../img/1_5KZjV6GR2ua-vlc1fiMNPw.webp)
+![Context API](../../img/1_5KZjV6GR2ua-vlc1fiMNPw.webp)
 
 ## Parameters
 
