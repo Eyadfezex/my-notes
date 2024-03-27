@@ -1,22 +1,35 @@
-# Actions
+# Actions in Redux
 
-An action in Redux is a simple JavaScript object with a `type` field, representing an event in the application. The `type` field usually follows the convention "feature/eventName", indicating the feature or category, and the specific event. Additional information can be included in a field named `payload`,for example:
+Actions are the fundamental way to communicate state changes in a Redux application. They are plain JavaScript objects that describe what happened in the application.
 
-```js
+## Structure of an Action
+
+An action must have a mandatory `type` property that indicates the type of action being performed. By convention, the `type` property is a string formatted as "feature/eventName" to clearly describe the feature and the specific event that occurred.
+
+Optionally, actions can also include a `payload` property. The `payload` carries any additional information needed to process the action.
+
+Here's an example of an action object:
+
+```javascript
 const addTodoAction = {
   type: "todos/todoAdded",
   payload: "Buy milk",
 };
 ```
 
-Actions are executed via the `dispatch()` method, which forwards the action to the store:
-![action](../../../img/redux_action.png)
+In this example, the action describes that a todo item has been added ("todos/todoAdded"). The `payload` property carries the content of the new todo item ("Buy milk").
+
+## Dispatching Actions
+
+Actions are sent to the Redux store using the `dispatch()` method. The store then forwards the action to the reducers, which will update the application state accordingly.
 
 ## Action Creators
 
-An **action creator** is a function that creates and returns an action object. We typically use these so we don't have to write the action object by hand every time:
+To avoid writing action objects by hand every time, we can use action creators. Action creators are functions that return action objects. They typically encapsulate the logic of creating an action and make the code more readable and maintainable.
 
-```js
+Here's an example of an action creator for adding a todo:
+
+```javascript
 const addTodo = (text) => {
   return {
     type: "todos/todoAdded",
@@ -24,3 +37,7 @@ const addTodo = (text) => {
   };
 };
 ```
+
+The `addTodo` function takes the todo text as input and returns an action object with the appropriate type and payload.
+
+By using action creators, we can improve code readability and maintainability, and ensure that actions are created consistently throughout the application.

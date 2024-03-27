@@ -1,11 +1,17 @@
-# Selectors
+# Selectors: State Sleuths
 
-Selectors are functions that know how to extract specific pieces of information from a store state value. As an application grows bigger, this can help avoid repeating logic as different parts of the app need to read the same data:
+Selectors are functions that act like bloodhounds for your Redux state. They sniff out specific data, keeping component logic clean and reusable. They can also boost performance by optimizing re-calculations.
+
+## Example
 
 ```js
-const selectCounterValue = (state) => state.value;
+const selectCompletedTodos = (state) => {
+  return state.todos.filter((todo) => todo.completed);
+};
 
-const currentValue = selectCounterValue(store.getState());
-console.log(currentValue);
-// 2
+const completedTodos = selectCompletedTodos(store.getState());
+
+console.log(completedTodos); // Array of completed todos
 ```
+
+In short, selectors simplify state access and make Redux development more efficient.
