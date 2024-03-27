@@ -12,6 +12,6 @@ return {
 };
 ```
 
-Redux Toolkit's `createSlice` function simplifies immutable updates by utilizing the Immer library, which tracks mutations using a Proxy-based approach. This enables writing code that appears to mutate data while ensuring immutability, thereby reducing the risk of accidental state mutations and enhancing code readability.
+Redux Toolkit's `createSlice` function simplifies immutable updates by utilizing the Immer library, which tracks mutations using a Proxy-based approach. This enables writing code that appears to mutate data while ensuring [immutability](../../../JS/topics/Immutability.md), thereby reducing the risk of accidental state mutations and enhancing code readability.
 
 Using `createSlice` or `createReducer` from Redux Toolkit with Immer ensures that mutating logic is handled safely. Attempting mutating logic in reducers without Immer can lead to state mutation bugs.
