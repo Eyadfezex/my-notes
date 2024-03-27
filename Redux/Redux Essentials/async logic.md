@@ -13,8 +13,7 @@ Here's the gist:
   2. Ask the internet for the data (like placing an order online).
   3. Once it arrives, update the filing cabinet with the new info (like putting the delivered package away).
   4. If there's a problem, you take care of it (like dealing with a missing item).
-<br>
-Here's what that data flow looks like visually:
+     <br>
+     Here's what that data flow looks like visually:
 
 ![async logic](https://github.com/Eyadfezex/my-notes/assets/112803756/17ba4afc-19c2-4e7d-b428-0331f24fd3b2)
-
