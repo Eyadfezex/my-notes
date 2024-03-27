@@ -1,6 +1,6 @@
 # Creating Slice Reducers and Actions
 
-In the [`features/counter/counterSlice.js`](./Creating%20the%20Redux%20Store.md) file, we define a Redux slice using the `createSlice` function from `@reduxjs/toolkit`. This slice manages the state for a counter feature.
+In the `features/counter/counterSlice.js` file, we define a Redux slice using the `createSlice` function from `@reduxjs/toolkit`. This slice manages the state for a counter feature.
 
 Here's what's inside the file:
 
