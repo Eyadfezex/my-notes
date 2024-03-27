@@ -15,4 +15,4 @@ Here's the gist:
   4. If there's a problem, you take care of it (like dealing with a missing item).
 
 Here's what that data flow looks like visually:
-![Async logic](https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)
+![Async logic] (https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif)
