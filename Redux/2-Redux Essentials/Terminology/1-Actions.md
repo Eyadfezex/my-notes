@@ -21,7 +21,7 @@ In this example, the action describes that a todo item has been added ("todos/to
 
 ## Dispatching Actions
 
-Actions are sent to the Redux store using the `dispatch()` method. The store then forwards the action to the reducers, which will update the application state accordingly.
+Actions are sent to the Redux store using the `dispatch()` method. The store then **forwards the action to the reducers**, which will update the application state accordingly.
 
 ## Action Creators
 
