@@ -13,7 +13,8 @@ Here's the gist:
   2. Ask the internet for the data (like placing an order online).
   3. Once it arrives, update the filing cabinet with the new info (like putting the delivered package away).
   4. If there's a problem, you take care of it (like dealing with a missing item).
-
+<br>
 Here's what that data flow looks like visually:
 
-![Async logic]([https://redux.js.org/assets/images/ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80.gif](https://camo.githubusercontent.com/79eb282f3949943c160f1851da08e069d082d618faf22fc4248f49dc88f36766/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966)https://camo.githubusercontent.com/79eb282f3949943c160f1851da08e069d082d618faf22fc4248f49dc88f36766/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6d656469612d702e736c69642e65732f75706c6f6164732f3336343831322f696d616765732f323438343739302f415243482d5265647578322d657874656e6465642d7265616c2d6465636c657261746976652e676966)
+![async logic](https://github.com/Eyadfezex/my-notes/assets/112803756/17ba4afc-19c2-4e7d-b428-0331f24fd3b2)
+
