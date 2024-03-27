@@ -8,7 +8,9 @@ But all of these benefits come with a set of **challenges**.
 ## What is Redux used for ?
 
 Redux maintains and updates shared data across components in a large application, keeping them independent by centralizing the state in a Redux store.
+<br>
 ![store](../../img/redux_store.png)
+<br>
 For passing data from a parent to a deeply nested child in React, Context can be used. However, for sharing state between components on the same level, Redux is the preferred choice.
 
 ## Redux with React
