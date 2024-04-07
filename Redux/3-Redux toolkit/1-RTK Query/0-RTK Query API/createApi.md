@@ -1,6 +1,6 @@
 # `createApi`
 
-`createApi` is a pivotal feature of [RTK Query](../0-RTK%20Query%20Basics.md), empowering developers to craft endpoints for fetching data from APIs and other asynchronous sources. It generates an "API slice" structure imbued with Redux logic and optional React hooks, simplifying data fetching and caching.
+`createApi` is a pivotal feature of [RTK Query](../../../2-Redux%20Essentials/8-RTK%20Query%20Basics.md), empowering developers to craft endpoints for fetching data from APIs and other asynchronous sources. It generates an "API slice" structure imbued with Redux logic and optional React hooks, simplifying data fetching and caching.
 
 ## Parameters
 
