@@ -4,7 +4,6 @@
 
 ```jsx
 const SomeComponent = lazy(load);
-y;
 ```
 
 Call `lazy` outside your components to declare a lazy-loaded React component:
