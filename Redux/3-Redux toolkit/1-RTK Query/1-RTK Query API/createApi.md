@@ -18,6 +18,8 @@
 
 - `invalidatesTags`: An advanced feature enabling developers to specify cache tags to invalidate upon executing a particular query, ensuring that relevant cached data is refreshed or cleared, thereby maintaining data coherence across the application.
 
+- `onQueryStarted`: Is a callback function triggered at the start of each query or mutation. It's provided with a lifecycle API object, offering hooks like `queryFulfilled` to execute code during different phases of a query/mutation's lifecycle, from initiation to completion or failure and it's used in **Optimistic Updates and Caching Logic**.
+
 ### Example Usage
 
 ```javascript
