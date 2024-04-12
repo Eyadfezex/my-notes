@@ -12,6 +12,10 @@
 
 - `reducerPath`: Determines the key under which the generated reducer is stored in the Redux store, facilitating organization and enabling multiple API slices within the same store without conflicts.
 
+- `refetchOnMountOrArgChange`:Defaults to `false`. This setting allows you to control whether if a cached result is already available RTK Query will only serve a cached result, or if it should `refetch` when set to `true` or if an adequate amount of time has passed since the last successful query result.
+
+- `refetchOnReconnect`: Defaults to `false`. This setting allows you to control whether RTK Query will try to refetch all subscribed queries after regaining a network connection.
+
 ## Anatomy of an Endpoint
 
 - `query`: Embedded within an endpoint definition, this function dictates the logic for fetching data from the backend API, encompassing parameters, transformations, and other requisites for data retrieval.
@@ -20,7 +24,9 @@
 
 - `onQueryStarted`: Is a callback function triggered at the start of each query or mutation. It's provided with a lifecycle API object, offering hooks like `queryFulfilled` to execute code during different phases of a query/mutation's lifecycle, from initiation to completion or failure and it's used in **Optimistic Updates and Caching Logic**.
 
-### Example Usage
+- `keepUnusedDataFor` : keepUnusedDataFor is an option used in RTK Query to control the caching behavior of fetched data. It specifies the duration (in seconds) for which RTK Query will retain data in the cache after the last component unsubscribes from that dat
+
+**Example Usage for `createApi` with `fetchBaseQuery` to create a API slice**
 
 ```javascript
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
