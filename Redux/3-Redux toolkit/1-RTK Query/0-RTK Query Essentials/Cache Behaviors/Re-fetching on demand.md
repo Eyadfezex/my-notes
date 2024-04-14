@@ -7,6 +7,8 @@ Calling the refetch function will force refetch the associated query.
 Alternatively, you can dispatch the `initiate` thunk action for an endpoint, passing the option `forceRefetch: true` to the thunk action creator for the same effect.
 
 ```js
+const { data, refetch } = useGetPostsQuery({ count: 5 });
+
 function handleRefetchOne() {
   // force re-fetches the data
   refetch();
