@@ -32,9 +32,11 @@
 
     - A primary use case for onCacheEntryAdded is to establish long-running operations (like WebSocket connections) that keep the cached data up-to-date.
 
-    **Example Usage for `createApi` with `fetchBaseQuery` to create a API slice**
+---
 
-```javascript
+**Example Usage for `createApi` with `fetchBaseQuery` to create a API slice**
+
+```js
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const api = createApi({
