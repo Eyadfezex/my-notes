@@ -75,5 +75,3 @@ const chatApi = createApi({
 - **Real-time Chat Applications:** Maintain a persistent WebSocket connection to a chat server, receiving and sending messages in real-time.
 - **Real-time Multiplayer Games:** Keep game state synchronized between players by utilizing WebSockets to exchange updates continuously.
 - **Collaborative Document Editing:** Allow multiple users to edit a document concurrently in real-time using WebSockets for bidirectional communication.
-
-By understanding these approaches and use cases, you can effectively incorporate real-time data updates into your applications built with RTK Query. Remember to choose the method that best suits your application's specific requirements and your development expertise.
