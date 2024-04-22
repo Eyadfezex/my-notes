@@ -24,6 +24,8 @@
 
 - `onQueryStarted`: Is a callback function triggered at the start of each query or mutation. It's provided with a lifecycle API object, offering hooks like `queryFulfilled` to execute code during different phases of a query/mutation's lifecycle, from initiation to completion or failure and it's used in **Optimistic Updates and Caching Logic**.
 
+-`transformResponse`:A function to manipulate the data returned by a query or mutation.
+
 - `keepUnusedDataFor`: keepUnusedDataFor is an option used in RTK Query to control the caching behavior of fetched data. It specifies the duration (in seconds) for which RTK Query will retain data in the cache after the last component unsubscribes from that dat
 
 - `onCacheEntryAdded`: This function is triggered when a new cache entry is added, providing a lifecycle object with properties like `cacheDataLoaded` and `cacheDataRemoved` for managing cache lifecycle actions.
