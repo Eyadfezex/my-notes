@@ -6,11 +6,11 @@
 - **Indexing:** Linked lists lack direct indexing like arrays. You traverse the list to find elements.
 - **Insertion/Deletion:** Insertion/deletion in linked lists is generally faster as you only need to adjust pointers. In arrays, elements might need to be shifted.
   <br/>
-  **Single List**
-  ![single list](https://www.freecodecamp.org/news/content/images/2022/05/linked-list.png)
+  **Single List** :
+  - ![single list](https://www.freecodecamp.org/news/content/images/2022/05/linked-list.png)
   ***
-  **double List**
-  ![double list](https://www.freecodecamp.org/news/content/images/2022/05/doubly-linked-list.png)
+  **double List** :
+  - ![double list](https://www.freecodecamp.org/news/content/images/2022/05/doubly-linked-list.png)
 
 ### Singly Linked List Implementation
 
