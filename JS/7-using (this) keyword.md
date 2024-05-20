@@ -2,7 +2,7 @@
 
 In JavaScript, the `this` keyword is a little different compared to other languages. It refers to an object, but it depends on how or where it is being invoked. It also has some differences between strict mode and non-strict mode.
 
-In non–strict mode, `this` is always a reference to an object. In strict mode, it can be any value. For more information on how the value is determined, see the description below.
+In non–strict mode, `this` is always a reference to an object. In strict mode, it can be any value.
 
 ```js
 const test = {

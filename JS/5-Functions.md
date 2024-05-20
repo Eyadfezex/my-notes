@@ -29,15 +29,15 @@ Immediately-Invoked Function Expression is a function that is executed immediate
 
 ```js
 (function () {
-  // …
+  // Code to be executed immediately
 })();
 
 (() => {
-  // …
+  // Code to be executed immediately
 })();
 
 (async () => {
-  // …
+  // Code to be executed immediately
 })();
 ```
 
@@ -72,7 +72,7 @@ The call stack in JavaScript is like a to-do list for function calls. It follows
 
 ## Built in functions
 
-A JavaScript method is a property containing a function definition. In other words, when the data stored on an object is a function we call that a method. [source](https://dev.to/elpepebenitez/built-in-methods-in-javascript-4bll)
+A JavaScript method is a property containing a function definition. In other words, when the data stored on an object is a function we call that a method. [**source**](https://dev.to/elpepebenitez/built-in-methods-in-javascript-4bll)
 
 ---
 
