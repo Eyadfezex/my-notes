@@ -233,3 +233,5 @@ function Profile() {
 ---
 
 ## Refetching and pagination
+
+Apollo's Suspense data fetching hooks return functions for refetching query data via the `refetch` function, and fetching additional pages of data via the `fetchMore` function.
