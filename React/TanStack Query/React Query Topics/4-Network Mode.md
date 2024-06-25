@@ -90,4 +90,4 @@ export function App() {
 }
 ```
 
-In this example, the `MyComponent` query is set to use the `online` network mode, overriding the default `offlineFirst` mode specified in the `QueryClient` configuration.
+In this example, the `MyComponent` query is set to use the `online` network mode, overriding the default `offlineFirst` mode specified in the `QueryClient` configuration. This flexibility allows for fine-tuning how each query behaves in different network conditions.

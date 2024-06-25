@@ -20,18 +20,20 @@ import { queryOptions } from "@tanstack/react-query";
 // Define query options for fetching groups
 function groupOptions(id: number) {
   return queryOptions({
-    queryKey: ["groups", id],
-    queryFn: () => fetchGroups(id),
-    staleTime: 5 * 1000,
+    queryKey: ["groups", id], // Unique query key with group ID
+    queryFn: () => fetchGroups(id), // Function to fetch groups by ID
+    staleTime: 5 * 1000, // Time (in milliseconds) the data is considered fresh
   });
 }
 
 // Usage examples
-useQuery(groupOptions(1));
-useSuspenseQuery(groupOptions(5));
+useQuery(groupOptions(1)); // Using query options with useQuery
+useSuspenseQuery(groupOptions(5)); // Using query options with useSuspenseQuery
 useQueries({
-  queries: [groupOptions(1), groupOptions(2)],
+  queries: [groupOptions(1), groupOptions(2)], // Using query options with useQueries
 });
-queryClient.prefetchQuery(groupOptions(23));
-queryClient.setQueryData(groupOptions(42).queryKey, newGroups);
+queryClient.prefetchQuery(groupOptions(23)); // Prefetching query using query options
+queryClient.setQueryData(groupOptions(42).queryKey, newGroups); // Setting query data manually
 ```
+
+By defining and using query options in this way, you can maintain consistency, improve code reusability, and leverage TypeScript's type safety in your TanStack Query implementations.

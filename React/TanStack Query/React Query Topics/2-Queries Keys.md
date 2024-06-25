@@ -14,6 +14,8 @@ useQuery({ queryKey: ["todos"], queryFn: fetchTodoList });
 
 When fetching specific data based on parameters such as an ID or other identifiers, variables are included in query keys.
 
+### Examples
+
 ```tsx
 // Fetching an individual todo by ID
 useQuery({ queryKey: ["todo", 5], queryFn: () => fetchTodoById(5) });
@@ -32,18 +34,33 @@ useQuery({ queryKey: ["todos", { type: "done" }], queryFn: fetchDoneTodos });
 
 When a query depends on a variable, it should be included in the query key to ensure the fetch is correctly identified and managed.
 
+### Example
+
 ```tsx
 function Todos({ todoId }) {
   // Fetch data based on a query key and query function
   const { data, error, isPending, isSuccess, isError } = useQuery({
-    // The query key uniquely identifies this specific data fetch.
-    // It's an array containing 'todos' and the `todoId`
+    // The query key uniquely identifies this specific data fetch
     queryKey: ["todos", todoId],
-    // This function defines how to fetch the data. It likely calls
-    // another function `fetchTodoById` that takes the `todoId` as an argument
+    // This function defines how to fetch the data
     queryFn: () => fetchTodoById(todoId),
   });
 
-  // Add your component logic here
+  if (isPending) {
+    return <span>Loading...</span>;
+  }
+
+  if (isError) {
+    return <span>Error: {error.message}</span>;
+  }
+
+  return (
+    <div>
+      <h3>{data.title}</h3>
+      <p>{data.description}</p>
+    </div>
+  );
 }
 ```
+
+By utilizing query keys effectively, you can ensure precise data fetching, caching, and refetching behavior in your React applications using React Query.

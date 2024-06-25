@@ -24,13 +24,24 @@ function App() {
 ### Detailed Example
 
 ```tsx
+import { useQuery } from "@tanstack/react-query";
+
+// Function to fetch todo list data (replace with your implementation)
+const fetchTodoList = async () => {
+  const response = await fetch("/api/todos");
+  if (!response.ok) {
+    throw new Error("Network response was not ok");
+  }
+  return response.json();
+};
+
 // This function component renders the list of todos
 function Todos() {
-  // Fetches todo list data using a custom hook (likely custom or from a library)
+  // Fetches todo list data using the useQuery hook
   const { isPending, isError, data, error } = useQuery({
     // Query key to identify the specific data being fetched
     queryKey: ["todos"],
-    // Function responsible for fetching the todo list data (replace with your implementation)
+    // Function responsible for fetching the todo list data
     queryFn: fetchTodoList,
   });
 
@@ -54,8 +65,6 @@ function Todos() {
   );
 }
 ```
-
----
 
 ## Handling Query States
 
@@ -91,3 +100,5 @@ function Todos() {
   );
 }
 ```
+
+By following these examples, you can effectively manage data fetching in your React applications using React Query, ensuring a seamless and responsive user experience.
