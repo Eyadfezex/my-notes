@@ -1,21 +1,51 @@
 # Internet
 
-**How Does the Internet Work?**
+## How Does the Internet Work?
 
-1. **Data Storage**: Data is stored in servers located in different places around the world.
-2. **Data Transfer**: Data is transferred around the world through a complicated network of optical fiber cables.
-3. **Accessing Data**: Users can access data from fiber cables by connecting to Wi-Fi or using cellular data.
-4. **IP Address**: An IP address is a unique identity code for every device connected to the internet.
+1. **Data Storage**:
 
-**How Can We Search on Websites?**
+   - Data is stored on servers distributed globally, which act as storage centers for the internet's information.
 
-1. **IP Address and Domain Name**: Websites are stored on servers with IP addresses, but domain names are used to access them for user convenience.
-2. **DNS Server**: The Domain Name System (DNS) server translates domain names into IP addresses when users enter them in their browsers.
-3. **Data Center**: Requests are sent to the data center where the website is hosted, after obtaining the IP address.
-4. **Data Transmission**: Data is transmitted through fiber cables from the data center to the user's device.
-5. **Access Methods**: Data can be received through Ethernet cables, Wi-Fi, or cellular data, with cellular connections established via cell towers.
-6. **ICANN**: The Internet Corporation for Assigned Names and Numbers (ICANN) manages domain names and IP address assignments.
-7. **Data Transmission Format**: Data between devices is transmitted in binary code (0s and 1s).
-8. **HTTP Protocol**: The Hypertext Transfer Protocol (HTTP) facilitates the request and response cycle for transferring data between web servers and clients.
+2. **Data Transfer**:
 
-These notes provide an overview of how the internet functions and how users can search and access websites.
+   - Data travels across the world through a complex network of optical fiber cables, enabling rapid and large-scale data movement.
+
+3. **Accessing Data**:
+
+   - Users access this data by connecting their devices to the internet via Wi-Fi, Ethernet, or cellular data networks.
+
+4. **IP Address**:
+   - Every device connected to the internet is assigned a unique identity code known as an IP address, which helps in identifying and locating the device in the network.
+
+## How Can We Search on Websites?
+
+1. **IP Address and Domain Name**:
+
+   - While websites reside on servers with specific IP addresses, domain names provide an easy-to-remember way to access these sites.
+
+2. **DNS Server**:
+
+   - The Domain Name System (DNS) server translates human-friendly domain names into corresponding IP addresses when users type them into their browsers.
+
+3. **Data Center**:
+
+   - Once the IP address is obtained, the request is routed to the data center where the website is hosted.
+
+4. **Data Transmission**:
+
+   - The requested data is then transmitted from the data center to the user’s device through fiber cables.
+
+5. **Access Methods**:
+
+   - Users receive the data via various means, including Ethernet cables, Wi-Fi, or cellular data, with mobile connections facilitated by cell towers.
+
+6. **ICANN**:
+
+   - The Internet Corporation for Assigned Names and Numbers (ICANN) is responsible for managing the assignment of domain names and IP addresses globally.
+
+7. **Data Transmission Format**:
+
+   - Data between devices is transferred in binary form (0s and 1s), which computers can process and interpret.
+
+8. **HTTP Protocol**:
+   - The Hypertext Transfer Protocol (HTTP) governs the request-response cycle, enabling data transfer between web servers and clients.

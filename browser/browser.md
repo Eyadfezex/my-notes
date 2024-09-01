@@ -26,3 +26,26 @@
      - The final step is to paint the content onto the screen. This involves rendering pixels based on the layout information and the visual styles of each rendered object.
 
 These steps illustrate the process by which a web browser fetches and renders web pages, ultimately displaying them to the user.
+
+---
+
+## Differences: Web Page, Website, Web Server, and Search Engine
+
+To understand these differences, consider a library analogy:
+
+1. **Web Page**:
+
+   - A web page is like an individual book in the library, each page having specific content and location. It’s a single document on a website.
+
+2. **Website**:
+
+   - A website is analogous to a section in the library (like Science or History), containing multiple related web pages (like different books).
+
+3. **Web Server**:
+
+   - The web server is comparable to the entire library building, hosting multiple sections (websites) and ensuring access to the correct content.
+
+4. **Search Engine**:
+   - A search engine functions like the library’s search index, helping users find specific books (web pages) by cataloging their locations and content.
+
+This analogy helps clarify the roles and interactions between these internet components.
