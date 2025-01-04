@@ -1,25 +1,25 @@
 # Credential Management API
 
-The **Credential Management API** simplifies creating, storing, and retrieving user credentials, delivering secure and seamless authentication experiences for websites.
+The **Credential Management API** simplifies the creation, storage, and retrieval of user credentials, providing secure and seamless authentication experiences for modern web applications.
 
 ---
 
 ## Supported Credential Types
 
-The API supports a variety of credential types tailored for different authentication needs:
+The API supports multiple credential types, catering to diverse authentication needs:
 
-| **Credential Type**               | **Interface**                                            | **Description**                                                                                                           |
-| --------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| **Password**                      | `PasswordCredential`                                     | Manages traditional username-password combinations for secure authentication.                                             |
-| **Federated Identity**            | `IdentityCredential`, `FederatedCredential` (deprecated) | Enables login through third-party identity providers like Google or Facebook.                                             |
-| **One-Time Password (OTP)**       | `OTPCredential`                                          | Facilitates single-use passcode authentication, commonly sent via SMS or email.                                           |
-| **Web Authentication (WebAuthn)** | `PublicKeyCredential`                                    | Provides advanced passwordless authentication using public-key cryptography, such as biometric or hardware security keys. |
+| **Credential Type**               | **Interface**                                            | **Description**                                                                                                   |
+| --------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| **Password**                      | `PasswordCredential`                                     | Manages traditional username-password combinations for secure authentication.                                     |
+| **Federated Identity**            | `IdentityCredential`, `FederatedCredential` (deprecated) | Enables logins through third-party identity providers like Google or Facebook.                                    |
+| **One-Time Password (OTP)**       | `OTPCredential`                                          | Facilitates single-use passcode authentication, commonly sent via SMS or email.                                   |
+| **Web Authentication (WebAuthn)** | `PublicKeyCredential`                                    | Provides passwordless authentication using public-key cryptography, such as biometrics or hardware security keys. |
 
 ---
 
 ## Credential Hierarchy
 
-All credential types inherit from the `Credential` interface. This unified design allows shared functionality while accommodating specialized features for each credential type.
+All credential types inherit from the `Credential` interface. This unified structure allows shared functionality while accommodating specialized features for each credential type.
 
 ### Subclasses of `Credential`
 
@@ -29,13 +29,13 @@ All credential types inherit from the `Credential` interface. This unified desig
 | **Federated Credential**  | `FederatedCredential` | Third-party identity provider login (e.g., Google, Facebook).                 |
 | **Public Key Credential** | `PublicKeyCredential` | Passwordless authentication using WebAuthn (e.g., biometrics, security keys). |
 
-![img](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API/Credential_types/credential-types.svg)
+![Credential Type Hierarchy](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API/Credential_types/credential-types.svg)
 
 ---
 
-### Implementing `PasswordCredential`
+## Implementing `PasswordCredential`
 
-#### **Step 1: Create and Store Credentials**
+### **Step 1: Create and Store Credentials**
 
 Use the `navigator.credentials.store()` method to securely save user credentials after login.
 
@@ -61,13 +61,13 @@ navigator.credentials
   });
 ```
 
-![image](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API/Credential_types/password-create.svg)
+![Storing Password Credentials](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API/Credential_types/password-create.svg)
 
 ---
 
-#### **Step 2: Retrieve Stored Credentials**
+### **Step 2: Retrieve Stored Credentials**
 
-Retrieve saved credentials to enable auto-login or pre-fill login forms.
+Retrieve stored credentials to enable auto-login or pre-fill login forms.
 
 ```javascript
 navigator.credentials
@@ -91,13 +91,13 @@ function loginUser(username, password) {
 }
 ```
 
-![iamge](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API/Credential_types/password-get.svg)
+![Retrieving Password Credentials](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API/Credential_types/password-get.svg)
 
 ---
 
-#### **Step 3: Handle Logout**
+### **Step 3: Handle Logout**
 
-Prevent automatic login by calling `navigator.credentials.preventSilentAccess()` during logout.
+Disable automatic login by calling `navigator.credentials.preventSilentAccess()` during logout.
 
 ```javascript
 navigator.credentials
@@ -112,12 +112,12 @@ navigator.credentials
 
 ---
 
-### Best Practices
+## Best Practices
 
-1. **Use HTTPS**: The API requires secure HTTPS connections for functionality.
-2. **Seek User Consent**: Clearly communicate before storing user credentials.
-3. **Fallbacks for Compatibility**: Since not all browsers support this API, provide alternative methods like traditional login forms.
-4. **Regularly Update Credentials**: Encourage users to update their credentials periodically to enhance security.
-5. **Handle Errors Gracefully**: Implement robust error handling to manage issues during credential storage and retrieval.
+1. **Enforce HTTPS**: The API only functions over secure HTTPS connections.
+2. **Obtain User Consent**: Clearly communicate to users before storing their credentials.
+3. **Ensure Browser Compatibility**: Provide fallback methods, such as traditional login forms, for unsupported browsers.
+4. **Encourage Regular Updates**: Advise users to update their credentials periodically to enhance security.
+5. **Implement Robust Error Handling**: Gracefully handle issues during credential storage or retrieval.
 
-To know more, look at [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API)
+For more details, visit [MDN's Credential Management API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Credential_Management_API).
