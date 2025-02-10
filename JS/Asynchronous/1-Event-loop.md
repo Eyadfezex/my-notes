@@ -2,8 +2,6 @@
 
 The event loop is a fundamental concept in JavaScript that enables non-blocking I/O operations, even though JavaScript is single-threaded. It achieves this by offloading operations to the operating system or browser APIs whenever possible.
 
----
-
 ## Key Components
 
 ### Call Stack
