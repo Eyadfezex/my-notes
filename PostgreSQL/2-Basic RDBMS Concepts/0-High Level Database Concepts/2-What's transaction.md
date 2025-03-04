@@ -1,100 +1,156 @@
-# What is a Transaction?
+# Transactions in PostgreSQL
 
-## Overview
-
-A **transaction** is a sequence of operations performed on a database as a single logical unit of work. It ensures that a set of related changes to the database are executed in a way that maintains **data integrity** and **consistency**. Transactions are fundamental to database systems, enabling reliable and predictable behavior even in the face of errors or system failures.
+Transactions are a fundamental concept in PostgreSQL (and relational databases in general) that ensure data integrity and consistency. A transaction is a sequence of operations performed as a single logical unit of work. If all operations succeed, the transaction is committed, and changes are saved to the database. If any operation fails, the transaction is rolled back, and all changes are undone.
 
 ---
 
 ## Key Properties of Transactions (ACID)
 
-Transactions are defined by the **ACID** properties, which guarantee reliability and consistency:
+PostgreSQL transactions adhere to the **ACID** properties:
 
-1. **Atomicity**:
-
-   - Ensures that a transaction is treated as a single, indivisible unit.
-   - Either **all** operations in the transaction are completed, or **none** are.
-   - Example: If a transaction involves transferring money between two accounts, both the debit and credit operations must succeed. If one fails, the entire transaction is rolled back.
-
-2. **Consistency**:
-
-   - Ensures that a transaction brings the database from one **valid state** to another.
-   - All data must adhere to predefined rules (e.g., constraints, triggers) after the transaction.
-   - Example: If a database has a rule that account balances cannot be negative, a transaction violating this rule will be aborted.
-
-3. **Isolation**:
-
-   - Ensures that concurrent transactions do not interfere with each other.
-   - Each transaction operates as if it is the only one running, even if multiple transactions are executing simultaneously.
-   - Example: If two transactions are updating the same data, one will wait for the other to complete before proceeding.
-
-4. **Durability**:
-   - Ensures that once a transaction is committed, its changes are permanent and survive system failures.
-   - Example: After a successful transaction, the data is saved to disk and will not be lost even if the database crashes.
+1. **Atomicity**: Ensures that all operations within a transaction are treated as a single unit. Either all operations succeed, or none are applied.
+2. **Consistency**: Ensures that the database remains in a valid state before and after the transaction.
+3. **Isolation**: Ensures that concurrent transactions do not interfere with each other.
+4. **Durability**: Ensures that once a transaction is committed, its changes are permanently saved, even in the event of a system failure.
 
 ---
 
-## Transaction States
+## Transaction Commands in PostgreSQL
 
-A transaction goes through several states during its lifecycle:
+PostgreSQL provides the following commands to manage transactions:
 
-1. **Active**: The transaction is executing.
-2. **Partially Committed**: All operations are completed, but changes are not yet saved to disk.
-3. **Committed**: Changes are permanently saved, and the transaction is complete.
-4. **Failed**: An error occurs, and the transaction cannot proceed.
-5. **Aborted**: The transaction is rolled back, and the database is restored to its state before the transaction started.
-
----
-
-## Transaction Control Commands
-
-Databases provide commands to manage transactions:
-
-1. **BEGIN**: Starts a new transaction.
-2. **COMMIT**: Saves all changes made during the transaction permanently.
-3. **ROLLBACK**: Undoes all changes made during the transaction and restores the previous state.
-4. **SAVEPOINT**: Creates a point within a transaction to which you can later roll back.
-5. **SET TRANSACTION**: Configures transaction properties (e.g., isolation level).
+1. **`BEGIN`**: Starts a new transaction block.
+2. **`COMMIT`**: Saves the changes made during the transaction to the database.
+3. **`ROLLBACK`**: Discards the changes made during the transaction and reverts to the previous state.
+4. **`SAVEPOINT`**: Creates a point within a transaction to which you can later roll back.
+5. **`ROLLBACK TO SAVEPOINT`**: Rolls back to a specific savepoint without ending the transaction.
+6. **`RELEASE SAVEPOINT`**: Removes a savepoint so it can no longer be used.
 
 ---
 
-## Example of a Transaction
-
-Consider a banking system where money is transferred from Account A to Account B:
+## Basic Transaction Example
 
 ```sql
-BEGIN; -- Start the transaction
+BEGIN; -- Start a transaction
 
-UPDATE accounts SET balance = balance - 100 WHERE account_id = 'A'; -- Debit Account A
-UPDATE accounts SET balance = balance + 100 WHERE account_id = 'B'; -- Credit Account B
+UPDATE accounts SET balance = balance - 100 WHERE id = 1; -- Deduct $100 from account 1
+UPDATE accounts SET balance = balance + 100 WHERE id = 2; -- Add $100 to account 2
 
-COMMIT; -- Save changes permanently
+COMMIT; -- Commit the transaction (save changes)
 ```
 
-- If both updates succeed, the transaction is **committed**.
-- If either update fails, the transaction is **rolled back**, and no changes are applied.
+- If both `UPDATE` statements succeed, the transaction is committed, and the changes are saved.
+- If either `UPDATE` fails, the transaction can be rolled back to undo the changes.
 
 ---
 
-## Importance of Transactions
+## Rolling Back a Transaction
 
-1. **Data Integrity**: Ensures that the database remains in a consistent state.
-2. **Error Recovery**: Provides mechanisms to undo changes in case of errors.
-3. **Concurrency Control**: Manages simultaneous access to data by multiple users or applications.
-4. **Reliability**: Guarantees that changes are permanent once committed.
+```sql
+BEGIN; -- Start a transaction
 
----
+UPDATE accounts SET balance = balance - 100 WHERE id = 1; -- Deduct $100 from account 1
+UPDATE accounts SET balance = balance + 100 WHERE id = 2; -- Add $100 to account 2
 
-## Real-World Use Cases
+ROLLBACK; -- Roll back the transaction (discard changes)
+```
 
-1. **Banking Systems**: Transferring funds between accounts.
-2. **E-Commerce**: Processing orders and updating inventory.
-3. **Reservation Systems**: Booking tickets or rooms.
-4. **Inventory Management**: Updating stock levels.
+- The `ROLLBACK` command undoes all changes made during the transaction.
 
 ---
 
-## References
+## Using Savepoints
 
-- Database System Concepts by Abraham Silberschatz, Henry F. Korth, and S. Sudarshan
-- [PostgreSQL Documentation on Transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html)
+Savepoints allow you to create intermediate points within a transaction to which you can roll back without ending the entire transaction.
+
+```sql
+BEGIN; -- Start a transaction
+
+UPDATE accounts SET balance = balance - 100 WHERE id = 1; -- Deduct $100 from account 1
+SAVEPOINT my_savepoint; -- Create a savepoint
+
+UPDATE accounts SET balance = balance + 100 WHERE id = 2; -- Add $100 to account 2
+
+-- If something goes wrong, roll back to the savepoint
+ROLLBACK TO SAVEPOINT my_savepoint;
+
+COMMIT; -- Commit the transaction
+```
+
+- In this example, if the second `UPDATE` fails, you can roll back to `my_savepoint` without losing the first `UPDATE`.
+
+---
+
+## Nested Transactions
+
+PostgreSQL does not support true nested transactions, but you can simulate them using savepoints.
+
+```sql
+BEGIN; -- Outer transaction
+
+UPDATE accounts SET balance = balance - 100 WHERE id = 1; -- Deduct $100 from account 1
+SAVEPOINT nested_transaction; -- Simulate a nested transaction
+
+UPDATE accounts SET balance = balance + 100 WHERE id = 2; -- Add $100 to account 2
+
+-- Roll back the nested transaction
+ROLLBACK TO SAVEPOINT nested_transaction;
+
+COMMIT; -- Commit the outer transaction
+```
+
+---
+
+## Transaction Isolation Levels
+
+PostgreSQL supports different isolation levels to control how transactions interact with each other:
+
+1. **Read Uncommitted**: Allows dirty reads (not recommended).
+2. **Read Committed**: Ensures that only committed data is read (default in PostgreSQL).
+3. **Repeatable Read**: Ensures that if a transaction reads the same data multiple times, it will see the same values.
+4. **Serializable**: Ensures complete isolation, as if transactions were executed one after the other.
+
+To set an isolation level:
+
+```sql
+BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+```
+
+---
+
+## Autocommit Mode
+
+By default, PostgreSQL operates in **autocommit mode**, where each statement is treated as a separate transaction. To explicitly control transactions, you must use `BEGIN`, `COMMIT`, and `ROLLBACK`.
+
+To disable autocommit in a session:
+
+```sql
+SET AUTOCOMMIT TO OFF;
+```
+
+---
+
+## Best Practices for Transactions
+
+1. **Keep transactions short**: Long-running transactions can lock resources and impact performance.
+2. **Handle errors**: Use `ROLLBACK` to undo changes in case of errors.
+3. **Use savepoints**: For complex transactions, use savepoints to manage partial rollbacks.
+4. **Choose the right isolation level**: Select an isolation level that balances consistency and performance for your use case.
+
+---
+
+## Example: Error Handling in Transactions
+
+```sql
+BEGIN;
+
+UPDATE accounts SET balance = balance - 100 WHERE id = 1; -- Deduct $100 from account 1
+UPDATE accounts SET balance = balance + 100 WHERE id = 2; -- Add $100 to account 2
+
+-- Check for errors
+IF /* some condition */ THEN
+    ROLLBACK; -- Roll back the transaction
+ELSE
+    COMMIT; -- Commit the transaction
+END IF;
+```
