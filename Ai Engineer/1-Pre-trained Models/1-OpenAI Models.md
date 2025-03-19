@@ -58,57 +58,15 @@ LLMs rely on training data up to a **cutoff date**, impacting their ability to p
 
 ---
 
-# **OpenAI API Usage (JavaScript)**
+## Popular AI Models
 
-## **GPT-4o Example (Text Generation)**
-
-```js
-import OpenAI from "openai";
-
-const openai = new OpenAI({ apiKey: "YOUR_API_KEY" });
-
-async function generateText() {
-  const response = await openai.chat.completions.create({
-    model: "gpt-4o",
-    messages: [{ role: "user", content: "Translate 'Hello' to French." }],
-    max_tokens: 60,
-  });
-
-  console.log(response.choices[0].message.content);
-}
-
-generateText();
-```
-
-## **DALL·E 3 Example (Image Generation)**
-
-```js
-async function generateImage() {
-  const response = await openai.images.generate({
-    model: "dall-e-3",
-    prompt: "A futuristic cityscape at sunset.",
-    n: 1,
-    size: "1024x1024",
-  });
-
-  console.log(response.data[0].url);
-}
-
-generateImage();
-```
-
-## **Whisper Example (Speech-to-Text)**
-
-```js
-async function transcribeAudio() {
-  const audioFile = new Blob(["path_to_audio.wav"]);
-  const response = await openai.audio.transcriptions.create({
-    model: "whisper-1",
-    file: audioFile,
-  });
-
-  console.log(response.text);
-}
-
-transcribeAudio();
-```
+| AI Model                | Description                                                                                 | Key Features                                                                                           | Use Cases                                                                |
+| ----------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| **Anthropic's Claude**  | A conversational AI model focused on safe and responsible AI alignment.                     | Emphasizes AI safety, natural language understanding, and long-form text generation.                   | Chatbots, customer support, AI-assisted writing.                         |
+| **Google's Gemini**     | A powerful AI model by Google with multimodal capabilities for text, images, and code.      | Multimodal AI (text, images, audio, code), high reasoning ability, optimized for various applications. | Search engines, AI assistants, code generation, image understanding.     |
+| **Azure AI**            | Microsoft's cloud-based AI services, including machine learning, NLP, and computer vision.  | Pre-built AI models, integration with Microsoft services, scalable cloud solutions.                    | Business automation, AI-driven analytics, enterprise AI applications.    |
+| **AWS SageMaker**       | Amazon's platform for building, training, and deploying machine learning models.            | Supports various ML frameworks (TensorFlow, PyTorch), auto-scaling, and MLOps tools.                   | Predictive analytics, AI model training, cloud-based ML development.     |
+| **Hugging Face Models** | A hub for open-source AI models, specializing in transformers like BERT, GPT, and LLaMA.    | Community-driven AI model hub, NLP-focused, supports various AI frameworks.                            | AI research, chatbot development, text generation, language translation. |
+| **Mistral AI**          | A company focused on high-performance, open-weight AI models for generative tasks.          | Optimized for efficiency and performance, supports open-source AI models.                              | Generative AI, chatbots, document processing, AI research.               |
+| **Cohere**              | AI models optimized for NLP applications such as search, chatbots, and document processing. | Provides large-scale NLP models, API-based integration, optimized for enterprises.                     | AI-powered search, sentiment analysis, text summarization, chatbots.     |
+| **Replicate**           | A cloud-based API for running machine learning models easily in applications.               | Allows running AI models without setup, supports various AI frameworks, API-driven deployment.         | AI app development, running AI models at scale, rapid prototyping.       |

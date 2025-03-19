@@ -15,6 +15,5 @@ This paper examines the development of pre-trained models in machine learning, e
 - **Limited Generalization**: May struggle with highly specialized domains.
 - **Vocabulary Gaps**: Difficulty handling domain-specific terminology.
 - **Context Limitations**: Restrictions on input length in models like BERT.
-- **High Computational Costs**: Requires significant processing power.
 - **Lack of Transparency**: Functions as a "black box," making interpretation difficult.
 - **Security and Privacy Risks**: Potential vulnerabilities when using external models."
