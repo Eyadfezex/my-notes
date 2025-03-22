@@ -32,8 +32,6 @@ The OpenAI Playground is an interactive web-based platform that allows users to 
 
 For a visual walkthrough, consider watching this tutorial:
 
-videoHow to Use OpenAI Playground Like a Proturn0search0
-
 ---
 
 ## Fine-Tuning OpenAI Models
