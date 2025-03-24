@@ -6,7 +6,6 @@ AI Engineers design and build AI systems using machine learning to enable tasks 
 ## Key Skills
 
 - **Programming:** Python, JavaScript
-- **Mathematics:** Algebra, calculus, statistics
 - **Machine Learning:** Algorithms, TensorFlow, PyTorch
 - **Data Handling:** Collection & preparation
 
