@@ -87,6 +87,69 @@ Instructs AI to mimic a specific style or viewpoint.
 - **Example:** "Write a speech as if you were a 19th-century poet."
 - **Use Case:** Creative and stylistic applications.
 
+## 13. Tree-of-Thoughts (ToT) Prompting
+
+Allows AI to explore multiple reasoning paths before selecting the best solution.
+
+- **Example:** "Consider different strategies to solve this logic puzzle and choose the best one."
+- **Use Case:** Improves problem-solving in complex tasks.
+
+## 14. Meta Prompting
+
+Focuses on the structure and syntax of tasks rather than specific content details.
+
+- **Example:** "Design a prompt format that extracts key information from news articles."
+- **Use Case:** Prompt structure optimization.
+
+## 15. Active Prompting
+
+Enhances adaptability by selecting task-specific example prompts annotated with human-designed Chain-of-Thought (CoT) reasoning.
+
+- **Example:** "Choose the best reasoning pattern for solving algebraic equations."
+- **Use Case:** Adaptive learning.
+
+## 16. Multimodal Chain-of-Thought (CoT) Prompting
+
+Enhances reasoning by integrating textual and visual inputs.
+
+- **Example:** "Analyze this graph and explain the trend in text."
+- **Use Case:** Visual question answering.
+
+## 17. Automatic Prompt Engineer (APE)
+
+Automatically generates and optimizes prompts to improve LLM performance.
+
+- **Example:** "Find the most effective prompt structure for legal document summarization."
+- **Use Case:** Automated prompt refinement.
+
+## 18. Automatic Multi-step Reasoning and Tool-use (ART)
+
+Generates multi-step prompts and integrates external tools to solve complex tasks.
+
+- **Example:** "Use a calculator API to solve these finance-related queries."
+- **Use Case:** External tool integration.
+
+## 19. ReAct (Reasoning and Acting)
+
+Combines reasoning with action to generate responses and execute tasks.
+
+- **Example:** "Analyze this dataset and return key statistics."
+- **Use Case:** AI-driven decision-making.
+
+## 20. Self-Refinement Prompting
+
+Encourages iterative review and improvement of AI responses.
+
+- **Example:** "Check and improve your previous response for clarity and completeness."
+- **Use Case:** Self-correcting AI outputs.
+
+## 21. Problem Decomposition Prompting
+
+Breaks down complex problems into smaller sub-problems for systematic solving.
+
+- **Example:** "List the steps needed to automate a customer support chatbot."
+- **Use Case:** Tackling large-scale problems.
+
 ## Sources
 
 - [Prompt Engineering Guide](https://www.promptingguide.ai/introduction/basics)
@@ -99,3 +162,11 @@ Instructs AI to mimic a specific style or viewpoint.
 - [Dual-Prompt Approach](https://learnprompting.org/docs/intermediate/generated_knowledge#dual-prompt-approach)
 - [The Ultimate Guide to LLM Prompting](https://medium.com/@subhraj07/the-ultimate-guide-to-llm-prompting-fine-tuning-and-data-management-933bbd2d05f4)
 - [Prompt Structure Guide](https://learnprompting.org/docs/basics/prompt_structure)
+- [Meta Prompting](https://www.promptingguide.ai/techniques/meta-prompting)
+- [Active Prompting](https://www.promptingguide.ai/techniques/activeprompt)
+- [Multimodal CoT](https://www.promptingguide.ai/techniques/multimodalcot)
+- [Automatic Prompt Engineer (APE)](https://arxiv.org/abs/2310.14735)
+- [Automatic Multi-step Reasoning and Tool-use (ART)](https://arxiv.org/abs/2310.14735)
+- [ReAct (Reasoning and Acting)](https://blog.mlq.ai/prompt-engineering-advanced-techniques)
+- [Self-Refinement Prompting](https://learnprompting.org/courses/advanced-prompt-engineering)
+- [Problem Decomposition Prompting](https://learnprompting.org/courses/advanced-prompt-engineering)
