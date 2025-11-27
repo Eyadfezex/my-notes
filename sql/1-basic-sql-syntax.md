@@ -83,11 +83,58 @@ SQL uses a standardized set of keywords and structures for working with relation
 
 ### Joins
 
-- `JOIN`, `INNER JOIN`: combine matching rows from tables
-- `LEFT JOIN`, `RIGHT JOIN`: include all rows from one side, matched when possible
-- `FULL JOIN`: include all rows from both tables
-- `ON`: specify joining conditions
-- `USING`: join by common column
+- `JOIN`, `INNER JOIN`: combine matching rows from tables  
+  _Example_:
+
+  ```sql
+  SELECT users.name, orders.id
+  FROM users
+  INNER JOIN orders ON users.id = orders.user_id;
+  ```
+
+- `LEFT JOIN`, `RIGHT JOIN`: include all rows from one side, matched when possible  
+  _Example (LEFT JOIN)_:
+
+  ```sql
+  SELECT users.name, orders.id
+  FROM users
+  LEFT JOIN orders ON users.id = orders.user_id;
+  ```
+
+  _Example (RIGHT JOIN)_:
+
+  ```sql
+  SELECT users.name, orders.id
+  FROM users
+  RIGHT JOIN orders ON users.id = orders.user_id;
+  ```
+
+- `FULL JOIN`: include all rows from both tables  
+  _Example_:
+
+  ```sql
+  SELECT users.name, orders.id
+  FROM users
+  FULL JOIN orders ON users.id = orders.user_id;
+  ```
+
+- `ON`: specify joining conditions  
+  _Example_:
+
+  ```sql
+  SELECT *
+  FROM products
+  JOIN orders ON products.id = orders.product_id;
+  ```
+
+- `USING`: join by common column  
+  _Example_:
+
+  ```sql
+  SELECT *
+  FROM products
+  JOIN inventory USING (id);
+  ```
 
 ### Functions and Expressions
 
