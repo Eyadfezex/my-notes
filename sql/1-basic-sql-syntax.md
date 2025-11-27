@@ -27,12 +27,59 @@ SQL uses a standardized set of keywords and structures for working with relation
 
 ### Data Definition (DDL)
 
-- `CREATE TABLE`: create a new table
-- `ALTER TABLE`: modify a table
-- `DROP TABLE`: delete a table
-- `TRUNCATE TABLE`: remove all rows quickly
-- `PRIMARY KEY`, `FOREIGN KEY`: define keys and relationships
-- `UNIQUE`, `NOT NULL`, `CHECK`: enforce constraints
+- `CREATE TABLE`: create a new table  
+  _Example_:
+
+  ```sql
+  CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(50)
+  );
+  ```
+
+- `ALTER TABLE`: modify a table  
+  _Example_:
+
+  ```sql
+  ALTER TABLE users ADD email VARCHAR(100);
+  ```
+
+- `DROP TABLE`: delete a table  
+  _Example_:
+
+  ```sql
+  DROP TABLE users;
+  ```
+
+- `TRUNCATE TABLE`: remove all rows quickly  
+  _Example_:
+
+  ```sql
+  TRUNCATE TABLE users;
+  ```
+
+- `PRIMARY KEY`, `FOREIGN KEY`: define keys and relationships  
+  _Example_:
+
+  ```sql
+  CREATE TABLE orders (
+    id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+  );
+  ```
+
+- `UNIQUE`, `NOT NULL`, `CHECK`: enforce constraints  
+  _Example_:
+
+  ```sql
+  CREATE TABLE products (
+    id INT PRIMARY KEY,
+    sku VARCHAR(20) UNIQUE,
+    price DECIMAL(10,2) NOT NULL,
+    quantity INT CHECK (quantity >= 0)
+  );
+  ```
 
 ### Joins
 
