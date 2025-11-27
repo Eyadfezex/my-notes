@@ -8,14 +8,29 @@ SQL uses a standardized set of keywords and structures for working with relation
 
 ### Querying Data
 
-- `SELECT`: retrieve data from tables
-- `FROM`: specify which table(s) to query
-- `WHERE`: filter rows by conditions
-- `DISTINCT`: return only unique results
-- `ORDER BY`: sort the results
-- `GROUP BY`: group rows for aggregation
-- `HAVING`: filter groups after aggregation
-- `LIMIT`, `OFFSET`: restrict or skip rows in the result
+- `SELECT`: retrieve data from tables  
+  _Example:_ `SELECT * FROM employees;`
+
+- `FROM`: specify which table(s) to query  
+  _Example:_ `SELECT name FROM employees;`
+
+- `WHERE`: filter rows by conditions  
+  _Example:_ `SELECT * FROM employees WHERE department = 'Sales';`
+
+- `DISTINCT`: return only unique results  
+  _Example:_ `SELECT DISTINCT department FROM employees;`
+
+- `ORDER BY`: sort the results  
+  _Example:_ `SELECT * FROM employees ORDER BY salary DESC;`
+
+- `GROUP BY`: group rows for aggregation  
+  _Example:_ `SELECT department, COUNT(*) FROM employees GROUP BY department;`
+
+- `HAVING`: filter groups after aggregation  
+  _Example:_ `SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5;`
+
+- `LIMIT`, `OFFSET`: restrict or skip rows in the result  
+  _Example:_ `SELECT * FROM employees LIMIT 10 OFFSET 5;`
 
 ### Data Manipulation (DML)
 
