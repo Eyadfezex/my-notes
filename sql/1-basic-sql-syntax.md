@@ -11,6 +11,7 @@ SQL uses a standardized set of keywords and structures for working with relation
 - `SELECT`: Retrieves data from one or more tables.
 
   - _Example:_
+
   - ```sql
     SELECT * FROM employees;
     SELECT name, salary FROM employees;
@@ -69,6 +70,7 @@ SQL uses a standardized set of keywords and structures for working with relation
     ```
 
 - `LIMIT`, `OFFSET`: Restricts the number of returned rows or skips rows in the result (syntax varies by SQL dialect).
+
   - _Example:_
 
     ```sql
@@ -219,7 +221,7 @@ SQL uses a standardized set of keywords and structures for working with relation
 
 ---
 
-# SQL Data Types
+## SQL Data Types
 
 Data types specify the kind of values allowed in a column.
 
