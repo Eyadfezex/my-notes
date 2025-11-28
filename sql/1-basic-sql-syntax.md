@@ -8,29 +8,73 @@ SQL uses a standardized set of keywords and structures for working with relation
 
 ### Querying Data
 
-- `SELECT`: retrieve data from tables  
-  _Example:_ `SELECT * FROM employees;`
+- `SELECT`: Retrieves data from one or more tables.
 
-- `FROM`: specify which table(s) to query  
-  _Example:_ `SELECT name FROM employees;`
+  - _Example:_
+  - ```sql
+    SELECT * FROM employees;
+    SELECT name, salary FROM employees;
+    ```
 
-- `WHERE`: filter rows by conditions  
-  _Example:_ `SELECT * FROM employees WHERE department = 'Sales';`
+- `FROM`: Specifies the source table(s) for your query.
 
-- `DISTINCT`: return only unique results  
-  _Example:_ `SELECT DISTINCT department FROM employees;`
+  - _Example:_
 
-- `ORDER BY`: sort the results  
-  _Example:_ `SELECT * FROM employees ORDER BY salary DESC;`
+    ```sql
+    SELECT name FROM employees;
+    SELECT e.name FROM employees e, departments d WHERE e.dept_id = d.id;
+    ```
 
-- `GROUP BY`: group rows for aggregation  
-  _Example:_ `SELECT department, COUNT(*) FROM employees GROUP BY department;`
+- `WHERE`: Filters rows according to specific conditions.
 
-- `HAVING`: filter groups after aggregation  
-  _Example:_ `SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5;`
+  - _Example:_
 
-- `LIMIT`, `OFFSET`: restrict or skip rows in the result  
-  _Example:_ `SELECT * FROM employees LIMIT 10 OFFSET 5;`
+    ```sql
+    SELECT * FROM employees WHERE department = 'Sales';
+    SELECT name FROM employees WHERE salary > 5000;
+    ```
+
+- `DISTINCT`: Returns only unique (non-duplicate) values.
+
+  - _Example:_
+
+    ```sql
+    SELECT DISTINCT department FROM employees;
+    ```
+
+- `ORDER BY`: Sorts results by one or more columns, ascending (`ASC`, default) or descending (`DESC`).
+
+  - _Example:_
+
+    ```sql
+    SELECT * FROM employees ORDER BY salary DESC, name ASC;
+    ```
+
+- `GROUP BY`: Groups rows sharing a property, commonly for aggregate functions like `COUNT`, `SUM`, `AVG`, `MAX`, `MIN`.
+
+  - _Example:_
+
+    ```sql
+    SELECT department, COUNT(*) FROM employees GROUP BY department;
+    SELECT department, AVG(salary) FROM employees GROUP BY department;
+    ```
+
+- `HAVING`: Filters groups, used after `GROUP BY` with aggregates.
+
+  - _Example:_
+
+    ```sql
+    SELECT department, COUNT(*) FROM employees GROUP BY department HAVING COUNT(*) > 5;
+    SELECT department, AVG(salary) FROM employees GROUP BY department HAVING AVG(salary) > 6000;
+    ```
+
+- `LIMIT`, `OFFSET`: Restricts the number of returned rows or skips rows in the result (syntax varies by SQL dialect).
+  - _Example:_
+
+    ```sql
+    SELECT * FROM employees LIMIT 10;
+    SELECT * FROM employees ORDER BY id LIMIT 10 OFFSET 5;
+    ```
 
 ### Data Manipulation (DML)
 
